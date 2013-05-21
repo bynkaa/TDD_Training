@@ -1,0 +1,13 @@
+Todo
+"" return 0
+"1" return 1
+"1,2" return 3
+Allow the Add method to handle an unknown amount of numbers
+Allow the add method to handle new lines between numbers
+    1. "1\n2,3" (equal 6)
+    2. "1,\n"
+
+
+// English Test
+
+0 return zero
