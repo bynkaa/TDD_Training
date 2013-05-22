@@ -140,5 +140,20 @@ public class EnglishTest {
         assertEquals("ten thousand", English.numberToWords(10000));
         assertEquals("ninety nine thousand nine hundred ninety nine",English.numberToWords(99999));
     }
+    @Test
+    public void TestSixDigitNumbers(){
+        assertEquals("one hundred thousand",English.numberToWords(100000));
+        assertEquals("two hundred thousand twenty eight",English.numberToWords(200028));
+        assertEquals("nine hundred ninety nine thousand nine hundred ninety nine", English.numberToWords(999999));
+    }
+    @Test
+    public void TestSevenDigitNumbers(){
+        assertEquals("one million",English.numberToWords(1000000));
+        assertEquals("three million six hundred thirty two",English.numberToWords(3000632));
+        assertEquals("three million six hundred thirty two",English.numberToWords(3000632));
+    }
+    /*@Test void TestNineDigitNumbers(){
+        assertEquals("one billion", English.numberToWords(1000000000));
+    }*/
 
 }

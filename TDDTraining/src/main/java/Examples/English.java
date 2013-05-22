@@ -15,26 +15,20 @@ public class English {
             return twoDigit(i);
 
         }
+        // one hundred -> nine hundred ninety nine
         else if (i >= 100 && i < 1000)
-            return threeDigits(i);
-        else if (i >= 1000 && i < 10000)
-            return fourDigits(i);
-        else if (i >= 10000 && i <100000)
-            return "";
-        return "null";
+            return moreThanTwoDigits(i,"hundred",100);
+        // one thousand -> nine hundred ninety nine thousand nine hundred ninety nine
+        else if (i >= 1000 && i < 1000000)
+            return moreThanTwoDigits(i,"thousand",1000);
+        else if (i >= 1000000 && i < 1000000000)
+            return moreThanTwoDigits(i,"million",1000000);
+        else
+            return "too large number";
     }
 
 
-    private static String fourDigits(int i) {
-        String s = "thousand";
-        int soHangNghin = i/1000;
-        int threeDigit = i%1000;
-        String numberName = oneDigit(soHangNghin) + " " + s;
-        if (threeDigit == 0)
-            return numberName;
-        numberName = numberName + " " + numberToWords(threeDigit);
-        return numberName;
-    }
+
 
     private static String oneDigit(int i){
         switch (i){
@@ -106,16 +100,14 @@ public class English {
         return "null";
     }
 
-    private static String threeDigits(int i){
-        String s = "hundred";
-        int tram = i / 100;
-        i = i%100;
-        String numberName = "";
-        numberName = oneDigit(tram) + " " + s;
-        if (i == 0)
+    private static String moreThanTwoDigits(int number, String nameOfFistComponent, int numberDigitsSecondComponent){
+        String s = nameOfFistComponent;
+        int firstComponent = number/numberDigitsSecondComponent;
+        int secondComponent = number%numberDigitsSecondComponent;
+        String numberName = numberToWords(firstComponent) + " " + s;
+        if (secondComponent == 0)
             return numberName;
-        numberName = numberName + " " + numberToWords(i);
+        numberName = numberName + " " + numberToWords(secondComponent);
         return numberName;
     }
-
 }

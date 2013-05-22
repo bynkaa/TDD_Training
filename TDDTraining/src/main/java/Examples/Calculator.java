@@ -1,5 +1,8 @@
 package Examples;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  * Created with IntelliJ IDEA.
  * User: BinkaA
@@ -16,14 +19,28 @@ public class Calculator {
 
         if (checkOneCharCustomDelimiter(s)){
 
+                splitDelimiterRegion(s);
                 return addUsingCustomDelimiter(s);
         }
         if (checkMultipleCustomDelimiter(s)){
+            splitDelimiterRegion(s);
            return addUsingAnyLengthCustomDelimiter(s);
         }
         else {
                 return addUsingDefaultDelimiter(s);
         }
+
+    }
+    // get delimiter
+    private static void splitDelimiterRegion(String s){
+        Pattern p = Pattern.compile("//\\[(.)+\\]\n");
+        Matcher m = p.matcher(s);
+        String del = "";
+        while(m.find()){
+            del = s.substring(m.start(),m.end());
+            break;
+        }
+        System.out.println(del);
 
     }
     // using any length custom delimiter
