@@ -1,0 +1,73 @@
+BT2:
+A Shopping Cart
+CORRECT
+C(conformance):------
+O(ordering):-------
+R(range): 
+- check addItems voi quantity = -1, deleteItems voi quantity = -1
+- addItems(Item,1),deleteItems(item,1)
+- addItems(Item,1),deleteItems(item,2)
+- khoi tao ShoppingCart, addItems(item1,1), deleteItems(item2,1)
+- khoi tao shoppingCart, addItems(item,1), deleteItems(item,1), itemCount()
+R(reference)
+- Item = null
+- trang thai cua Item, addItems neu quantity > real quantity cua item. 
+E(existence)
+- item = null, addItems(), deleteItems()
+- khoi tao shopping cart, deleteItem(item,1)
+- khoi tao shoppingCart, intemCount(), iterator()
+C(cardinality):         
+- -------                                                                              
+T(time) --------
+
+
+
+BT3:
+A fax scheduler
+- What boundary conditions can you think of?
+CORRECT
+C(Conformance)
+- check form xnn-nnn-nnnn, x[2..9], n[0..9]
+O(Ordering) ----
+R(Range):
+- x[2..9], n[0..9]
+R(Reference)----
+E(Existence)----
+C(Cardinality)----
+T(Time)----
+
+BT4:
+An automatic sewing machine that does embroidery
+What boundary conditions can you think of?
+C(conformance):
+- 
+O(ordering)
+-
+R(Range)
+- range cua x: 0 <= x < width
+- range cua y: 0 <= y < heigth
+- range cua width: 0 <= width < MAX
+- range cua heigh: 0 <= heigth < MAX
+R(Reference)----
+E(Existence)
+-chua set workpieceSize, moveTo(1,1), sewTo(3,3)
+C(Cardinality)----
+T(Time)-----
+
+
+*Conformance
+- does the value conform to an expected format?
+*Idea for Range conditions:
+- start and end index have the same value
+- first is greater than last
+- index is negative
+- index is greater than allowed
+- count doesn't match actual number of items
+*Existen:
+- check null, blank, zero
+*Cardinality:
+- in most cases, the count of some set of values is only interesting in these three cases:
+	+ zero
+	+ One
+	+ More than One
+	--> it's called the "0-1-n rule"
