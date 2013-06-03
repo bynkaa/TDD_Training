@@ -14,6 +14,43 @@ import static org.junit.Assert.fail;
 public class TestCalculator {
     @Test
     public void testEmptyString(){
-        assertEquals(0,"");
+        assertEquals(0,Calculator.add(""));
+    }
+    @Test
+    public void testAddWithOneNumber(){
+        assertEquals(1,Calculator.add("1"));
+    }
+    @Test
+    public void testAddWithSimpleCommaDelimiter(){
+        assertEquals(3,Calculator.add("1,2"));
+    }
+    @Test
+    public void testAddMethodHandleNewLinesBetweenNumbers(){
+        assertEquals(6,Calculator.add("1\n2,3"));
+    }
+    @Test
+    public void testWithSimpleCustomDelimiter(){
+        assertEquals(3,Calculator.add("//;\n1;2"));
+    }
+    @Test
+    public void testNegativeNumbers(){
+        try {
+            Calculator.add("1,-2");
+            fail();
+        }catch (RuntimeException re){
+            assertEquals("negatives not allowed!",re.getMessage());
+        }
+    }
+    @Test
+    public void testNumbersBiggerThan1000(){
+        assertEquals(2,Calculator.add("2,1001"));
+    }
+    @Test
+    public void testAnyLengthDelimiter(){
+        assertEquals(6,Calculator.add("//[***]\n1***2***3"));
+    }
+    @Test
+    public void testMultipleAnyLengthDelimiter(){
+        assertEquals(6,Calculator.add("//[*][%]\n1*2%3"));
     }
 }
