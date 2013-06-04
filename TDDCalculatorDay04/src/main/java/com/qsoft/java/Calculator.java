@@ -1,5 +1,8 @@
 package com.qsoft.java;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  * Created with IntelliJ IDEA.
  * User: BinkaA
@@ -13,17 +16,29 @@ public class Calculator {
         if (s.isEmpty())
             return 0;
         if (s.contains("//")){
+            String regex = "//(.)\n(.*)";
+            Matcher m = Pattern.compile(regex).matcher(s);
+            if (m.find()){
+                String fistSubStringComponent = m.group(1);
+                String secondSubStringComponent = m.group(2);
+                String[] listNumbers = secondSubStringComponent.split(fistSubStringComponent);
+                return computeSumFromListOfStringNumbers(listNumbers);
+
+            }
             return -1;
         }
         else {
-            String[] listNumbers = s.split("[,\n]");
-            int sum  = 0;
-            for (String number : listNumbers){
-                sum += Integer.parseInt(number);
-            }
-            return sum;
+            return computeSumFromListOfStringNumbers(s.split("[,\n]"));
+
         }
 
+    }
+    private static int computeSumFromListOfStringNumbers(String[] listNumbers){
 
+        int sum  = 0;
+        for (String number : listNumbers){
+            sum += Integer.parseInt(number);
+        }
+        return sum;
     }
 }
