@@ -12,15 +12,15 @@ public class Calculator {
 
         if (s.isEmpty())
             return 0;
-        else if (s.contains(",")){
-            String[] listNumbers = s.split(",");
+        else {
+            String[] listNumbers = s.split("[,\n]");
             int sum  = 0;
             for (String number : listNumbers){
                 sum += Integer.parseInt(number);
             }
             return sum;
         }
-        return -1;
+
 
     }
 }

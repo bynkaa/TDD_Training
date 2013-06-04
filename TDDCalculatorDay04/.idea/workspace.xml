@@ -5,9 +5,9 @@
     <ignored path="TDDCalculatorDay04.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/pom.xml" changelist="51804842-bf4d-4ff5-8701-5027b0a7e31c" time="1370328290453" ignored="false" />
-    <file path="/TestCalculator.java" changelist="51804842-bf4d-4ff5-8701-5027b0a7e31c" time="1370328840112" ignored="false" />
+    <file path="/TestCalculator.java" changelist="51804842-bf4d-4ff5-8701-5027b0a7e31c" time="1370329092809" ignored="false" />
     <file path="/fragment.java" changelist="51804842-bf4d-4ff5-8701-5027b0a7e31c" time="1370328563778" ignored="false" />
-    <file path="/Calculator.java" changelist="51804842-bf4d-4ff5-8701-5027b0a7e31c" time="1370328954358" ignored="false" />
+    <file path="/Calculator.java" changelist="51804842-bf4d-4ff5-8701-5027b0a7e31c" time="1370329120426" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,10 +75,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestCalculator.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TestCalculator.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/java/TestCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="46" selection-start="576" selection-end="576" vertical-scroll-proportion="0.0">
+            <state line="28" column="42" selection-start="687" selection-end="687" vertical-scroll-proportion="0.6644737">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,10 +86,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Calculator.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Calculator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/java/Calculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="18" selection-start="562" selection-end="562" vertical-scroll-proportion="0.8135965">
+            <state line="22" column="8" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -107,8 +107,8 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/qsoft/java/Calculator.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/qsoft/java/TestCalculator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/java/Calculator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/qsoft/java/TestCalculator.java" />
       </list>
     </option>
   </component>
@@ -320,6 +320,34 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="TestCalculator.testHandleNewLinesBetweenNumbers" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.qsoft.java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="TDDCalculatorDay04" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.qsoft.java" />
+      <option name="MAIN_CLASS_NAME" value="com.qsoft.java.TestCalculator" />
+      <option name="METHOD_NAME" value="testHandleNewLinesBetweenNumbers" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -411,14 +439,16 @@
       <patterns />
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="JUnit.TestCalculator" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.TestCalculator.testSingerNumber" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TestCalculator.testHandleNewLinesBetweenNumbers" />
     </list>
     <recent_temporary>
-      <list size="2">
+      <list size="3">
         <item index="0" class="java.lang.String" itemvalue="JUnit.TestCalculator" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TestCalculator.testSingerNumber" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TestCalculator.testHandleNewLinesBetweenNumbers" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TestCalculator.testSingerNumber" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -550,19 +580,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/java/TestCalculator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/java/Calculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="46" selection-start="576" selection-end="576" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="22" column="8" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/java/Calculator.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/java/TestCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="18" selection-start="562" selection-end="562" vertical-scroll-proportion="0.8135965">
-          <folding />
+        <state line="28" column="42" selection-start="687" selection-end="687" vertical-scroll-proportion="0.6644737">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
