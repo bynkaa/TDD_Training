@@ -5,7 +5,7 @@
     <ignored path="TDDCalculatorDay04.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/pom.xml" changelist="51804842-bf4d-4ff5-8701-5027b0a7e31c" time="1370328290453" ignored="false" />
-    <file path="/TestCalculator.java" changelist="51804842-bf4d-4ff5-8701-5027b0a7e31c" time="1370330042394" ignored="false" />
+    <file path="/TestCalculator.java" changelist="51804842-bf4d-4ff5-8701-5027b0a7e31c" time="1370330171071" ignored="false" />
     <file path="/fragment.java" changelist="51804842-bf4d-4ff5-8701-5027b0a7e31c" time="1370328563778" ignored="false" />
     <file path="/Calculator.java" changelist="51804842-bf4d-4ff5-8701-5027b0a7e31c" time="1370330094801" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -78,7 +78,7 @@
       <file leaf-file-name="TestCalculator.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/java/TestCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="5" selection-start="1339" selection-end="1339" vertical-scroll-proportion="0.8135965">
+            <state line="54" column="23" selection-start="1422" selection-end="1422" vertical-scroll-proportion="0.9254386">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -109,8 +109,8 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/qsoft/java/Calculator.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/qsoft/java/TestCalculator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/java/Calculator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/qsoft/java/TestCalculator.java" />
       </list>
     </option>
   </component>
@@ -593,7 +593,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/java/TestCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="5" selection-start="1339" selection-end="1339" vertical-scroll-proportion="0.8135965">
+        <state line="54" column="23" selection-start="1422" selection-end="1422" vertical-scroll-proportion="0.9254386">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
