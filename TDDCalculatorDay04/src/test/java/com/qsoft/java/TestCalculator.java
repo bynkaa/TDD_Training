@@ -43,7 +43,7 @@ public class TestCalculator {
             Calculator.add("1,-2");
             fail();
         }catch (RuntimeException re){
-
+            assertEquals("negatives not allowed!",re.getMessage());
         }
     }
 

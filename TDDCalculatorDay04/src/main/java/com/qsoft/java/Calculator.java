@@ -36,8 +36,11 @@ public class Calculator {
     private static int computeSumFromListOfStringNumbers(String[] listNumbers){
 
         int sum  = 0;
-        for (String number : listNumbers){
-            sum += Integer.parseInt(number);
+        for (String strNumber : listNumbers){
+            int number  = Integer.parseInt(strNumber);
+            if (number < 0)
+                throw new RuntimeException("negatives not allowed!");
+            sum += number;
         }
         return sum;
     }
