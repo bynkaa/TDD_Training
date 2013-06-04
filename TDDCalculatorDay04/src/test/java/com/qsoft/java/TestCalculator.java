@@ -3,6 +3,7 @@ package com.qsoft.java;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.fail;
 
 /**
  * Created with IntelliJ IDEA.
@@ -35,6 +36,15 @@ public class TestCalculator {
     @Test
     public void testAddWithSimpleACustomDelimiter(){
         assertEquals(3,Calculator.add("//;\n1;2"));
+    }
+    @Test
+    public void testNegativeNumbers(){
+        try{
+            Calculator.add("1,-2");
+            fail();
+        }catch (RuntimeException re){
+
+        }
     }
 
 }
