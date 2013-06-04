@@ -21,7 +21,7 @@ public class Calculator {
             if (m.find()){
                 String fistSubStringComponent = m.group(1);
                 String secondSubStringComponent = m.group(2);
-                String[] listNumbers = secondSubStringComponent.split(fistSubStringComponent);
+                String[] listNumbers = secondSubStringComponent.split(Pattern.quote(fistSubStringComponent));
                 return computeSumFromListOfStringNumbers(listNumbers);
 
             }
