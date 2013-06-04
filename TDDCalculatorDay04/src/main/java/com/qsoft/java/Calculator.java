@@ -12,6 +12,9 @@ public class Calculator {
 
         if (s.isEmpty())
             return 0;
+        if (s.contains("//")){
+            return -1;
+        }
         else {
             String[] listNumbers = s.split("[,\n]");
             int sum  = 0;
