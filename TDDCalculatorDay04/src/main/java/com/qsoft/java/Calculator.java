@@ -40,7 +40,8 @@ public class Calculator {
             int number  = Integer.parseInt(strNumber);
             if (number < 0)
                 throw new RuntimeException("negatives not allowed!");
-            sum += number;
+            if (number <= 1000)
+                sum += number;
         }
         return sum;
     }
