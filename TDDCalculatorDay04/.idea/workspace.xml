@@ -5,7 +5,7 @@
     <ignored path="TDDCalculatorDay04.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/pom.xml" changelist="51804842-bf4d-4ff5-8701-5027b0a7e31c" time="1370328290453" ignored="false" />
-    <file path="/TestCalculator.java" changelist="51804842-bf4d-4ff5-8701-5027b0a7e31c" time="1370329092809" ignored="false" />
+    <file path="/TestCalculator.java" changelist="51804842-bf4d-4ff5-8701-5027b0a7e31c" time="1370329268563" ignored="false" />
     <file path="/fragment.java" changelist="51804842-bf4d-4ff5-8701-5027b0a7e31c" time="1370328563778" ignored="false" />
     <file path="/Calculator.java" changelist="51804842-bf4d-4ff5-8701-5027b0a7e31c" time="1370329120426" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -78,7 +78,7 @@
       <file leaf-file-name="TestCalculator.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/java/TestCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="42" selection-start="687" selection-end="687" vertical-scroll-proportion="0.6644737">
+            <state line="26" column="4" selection-start="587" selection-end="587" vertical-scroll-proportion="0.5899123">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -589,7 +589,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/java/TestCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="42" selection-start="687" selection-end="687" vertical-scroll-proportion="0.6644737">
+        <state line="26" column="4" selection-start="587" selection-end="587" vertical-scroll-proportion="0.5899123">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
