@@ -4,7 +4,7 @@
     <list default="true" id="0768b82f-15f8-4197-bc56-42f87c67b0ec" name="Default" comment="" />
     <ignored path="TDDCalculatorDay05.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/TestCalculator.java" changelist="0768b82f-15f8-4197-bc56-42f87c67b0ec" time="1370416449084" ignored="false" />
+    <file path="/TestCalculator.java" changelist="0768b82f-15f8-4197-bc56-42f87c67b0ec" time="1370416519975" ignored="false" />
     <file path="/fragment.java" changelist="0768b82f-15f8-4197-bc56-42f87c67b0ec" time="1370414941077" ignored="false" />
     <file path="/Calculator.java" changelist="0768b82f-15f8-4197-bc56-42f87c67b0ec" time="1370416468901" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -74,10 +74,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestCalculator.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TestCalculator.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/tdd/TestCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="49" selection-start="1569" selection-end="1569" vertical-scroll-proportion="0.0">
+            <state line="61" column="23" selection-start="1658" selection-end="1658" vertical-scroll-proportion="0.9254386">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,10 +85,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Calculator.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Calculator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/tdd/Calculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="30" selection-start="1352" selection-end="1352" vertical-scroll-proportion="0.5153509">
+            <state line="46" column="96" selection-start="1389" selection-end="1389" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1105#1114#0" expanded="true" />
@@ -108,8 +108,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/qsoft/tdd/TestCalculator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/tdd/Calculator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/qsoft/tdd/TestCalculator.java" />
       </list>
     </option>
   </component>
@@ -514,21 +514,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/tdd/TestCalculator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/tdd/Calculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="49" selection-start="1569" selection-end="1569" vertical-scroll-proportion="0.0">
+        <state line="46" column="96" selection-start="1389" selection-end="1389" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1105#1114#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/tdd/Calculator.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/tdd/TestCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="30" selection-start="1352" selection-end="1352" vertical-scroll-proportion="0.5153509">
+        <state line="61" column="23" selection-start="1658" selection-end="1658" vertical-scroll-proportion="0.9254386">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1105#1114#0" expanded="true" />
           </folding>
         </state>
       </provider>
