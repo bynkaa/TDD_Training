@@ -19,5 +19,9 @@ public class TestCalculator {
     public void testWithOneNumber(){
         assertEquals(1,Calculator.add("1"));
     }
+    @Test
+    public void testWithManyNumbers(){
+        assertEquals(3,Calculator.add("1,2"));
+    }
 
 }

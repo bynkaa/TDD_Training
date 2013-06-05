@@ -11,7 +11,16 @@ public class Calculator {
     public static int add(String s) {
         if (s.isEmpty())
             return 0;
-        return -1;
+        else{
+            String[] listStrNumbers = s.split(",");
+            int sum = 0;
+            for (String strNumber : listStrNumbers)
+            {
+                sum += Integer.parseInt(strNumber);
+            }
+            return sum;
+        }
+
 
     }
 }
