@@ -53,5 +53,9 @@ public class TestCalculator {
             assertEquals("negatives not allowed,-1,-2", re.getMessage());
         }
     }
+    @Test
+    public void testAddWithNumbersBiggerThanOneThousand(){
+
+    }
 
 }
