@@ -65,6 +65,10 @@ public class TestCalculator {
     public void testAddWithMultipleDelimiters(){
         assertEquals(6,Calculator.add("//[*][%]\n1*2%3"));
     }
+    @Test
+    public void testAddWithMultipleAnyLengthDemiliter(){
+        assertEquals(6,Calculator.add("//[***][%%%]\n1***2%%%3"));
+    }
 
 
 }
