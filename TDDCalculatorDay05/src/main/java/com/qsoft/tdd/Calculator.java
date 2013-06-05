@@ -9,7 +9,9 @@ package com.qsoft.tdd;
  */
 public class Calculator {
     public static int add(String s) {
-        if ()
+        if (s.isEmpty())
+            return 0;
+        return -1;
 
     }
 }
