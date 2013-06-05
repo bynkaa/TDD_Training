@@ -37,7 +37,11 @@ public class Calculator {
         int sum = 0;
         for (String strNumber : listStrNumbers)
         {
-            sum += Integer.parseInt(strNumber);
+            int number = Integer.parseInt(strNumber);
+            if (number < 0){
+                throw new RuntimeException("negatives not allowed!");
+            }
+            sum += number;
         }
         return sum;
     }

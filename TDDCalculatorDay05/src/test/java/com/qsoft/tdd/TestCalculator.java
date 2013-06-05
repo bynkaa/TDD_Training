@@ -35,5 +35,14 @@ public class TestCalculator {
     public void testAddWithASimpleDelimiter(){
         assertEquals(3,Calculator.add("//;\n1;2"));
     }
+    @Test
+    public void testAddWithNegativeNumbers(){
+        try{
+            Calculator.add("1,-2");
+            fail();
+        }catch (RuntimeException re){
+            assertEquals("negatives not allowed!", re.getMessage());
+        }
+    }
 
 }

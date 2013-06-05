@@ -4,9 +4,9 @@
     <list default="true" id="0768b82f-15f8-4197-bc56-42f87c67b0ec" name="Default" comment="" />
     <ignored path="TDDCalculatorDay05.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/TestCalculator.java" changelist="0768b82f-15f8-4197-bc56-42f87c67b0ec" time="1370415507003" ignored="false" />
+    <file path="/TestCalculator.java" changelist="0768b82f-15f8-4197-bc56-42f87c67b0ec" time="1370415893545" ignored="false" />
     <file path="/fragment.java" changelist="0768b82f-15f8-4197-bc56-42f87c67b0ec" time="1370414941077" ignored="false" />
-    <file path="/Calculator.java" changelist="0768b82f-15f8-4197-bc56-42f87c67b0ec" time="1370415736348" ignored="false" />
+    <file path="/Calculator.java" changelist="0768b82f-15f8-4197-bc56-42f87c67b0ec" time="1370415849695" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,10 +74,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestCalculator.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TestCalculator.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/tdd/TestCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="51" selection-start="938" selection-end="938" vertical-scroll-proportion="0.0">
+            <state line="43" column="67" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.7017544">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,10 +85,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Calculator.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Calculator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/tdd/Calculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="22" selection-start="757" selection-end="757" vertical-scroll-proportion="0.5877193">
+            <state line="41" column="66" selection-start="1222" selection-end="1222" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,8 +107,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/qsoft/tdd/TestCalculator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/tdd/Calculator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/qsoft/tdd/TestCalculator.java" />
       </list>
     </option>
   </component>
@@ -513,18 +513,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/tdd/TestCalculator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/tdd/Calculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="51" selection-start="938" selection-end="938" vertical-scroll-proportion="0.0">
+        <state line="41" column="66" selection-start="1222" selection-end="1222" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/tdd/Calculator.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/tdd/TestCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="22" selection-start="757" selection-end="757" vertical-scroll-proportion="0.5877193">
+        <state line="43" column="67" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.7017544">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
