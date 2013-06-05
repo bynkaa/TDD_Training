@@ -4,9 +4,9 @@
     <list default="true" id="0768b82f-15f8-4197-bc56-42f87c67b0ec" name="Default" comment="" />
     <ignored path="TDDCalculatorDay05.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/TestCalculator.java" changelist="0768b82f-15f8-4197-bc56-42f87c67b0ec" time="1370415893545" ignored="false" />
+    <file path="/TestCalculator.java" changelist="0768b82f-15f8-4197-bc56-42f87c67b0ec" time="1370415999525" ignored="false" />
     <file path="/fragment.java" changelist="0768b82f-15f8-4197-bc56-42f87c67b0ec" time="1370414941077" ignored="false" />
-    <file path="/Calculator.java" changelist="0768b82f-15f8-4197-bc56-42f87c67b0ec" time="1370415849695" ignored="false" />
+    <file path="/Calculator.java" changelist="0768b82f-15f8-4197-bc56-42f87c67b0ec" time="1370416341318" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +77,7 @@
       <file leaf-file-name="TestCalculator.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/tdd/TestCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="67" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.7017544">
+            <state line="52" column="51" selection-start="1412" selection-end="1412" vertical-scroll-proportion="0.9254386">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,9 +88,10 @@
       <file leaf-file-name="Calculator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/tdd/Calculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="66" selection-start="1222" selection-end="1222" vertical-scroll-proportion="0.0">
+            <state line="49" column="51" selection-start="1476" selection-end="1476" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1105#1114#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -515,16 +516,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/tdd/Calculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="66" selection-start="1222" selection-end="1222" vertical-scroll-proportion="0.0">
+        <state line="49" column="51" selection-start="1476" selection-end="1476" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1105#1114#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/tdd/TestCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="67" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.7017544">
+        <state line="52" column="51" selection-start="1412" selection-end="1412" vertical-scroll-proportion="0.9254386">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

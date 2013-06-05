@@ -36,12 +36,21 @@ public class TestCalculator {
         assertEquals(3,Calculator.add("//;\n1;2"));
     }
     @Test
-    public void testAddWithNegativeNumbers(){
+    public void testAddWithANegativeNumber(){
         try{
             Calculator.add("1,-2");
             fail();
         }catch (RuntimeException re){
-            assertEquals("negatives not allowed!", re.getMessage());
+            assertEquals("negatives not allowed", re.getMessage());
+        }
+    }
+    @Test
+    public void testAddWithManyNegativeNumbers(){
+        try {
+            Calculator.add("-1,-2");
+            fail();
+        }catch (RuntimeException re){
+            assertEquals("negatives not allowed,-1,-2", re.getMessage());
         }
     }
 

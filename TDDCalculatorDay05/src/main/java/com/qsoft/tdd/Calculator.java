@@ -1,5 +1,6 @@
 package com.qsoft.tdd;
 
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -35,13 +36,26 @@ public class Calculator {
 
     private static int computeTotalOfListNumbers(String[] listStrNumbers){
         int sum = 0;
+        ArrayList<Integer> negativeNumbersList = new ArrayList<Integer>();
         for (String strNumber : listStrNumbers)
         {
             int number = Integer.parseInt(strNumber);
             if (number < 0){
-                throw new RuntimeException("negatives not allowed!");
+                negativeNumbersList.add(number);
             }
-            sum += number;
+            else
+                sum += number;
+        }
+        if (!negativeNumbersList.isEmpty()){
+            String message = "negatives not allowed";
+            if (negativeNumbersList.size() >= 2)
+            {
+                for (Integer i : negativeNumbersList)
+                    message += "," + i.toString();
+            }
+            throw new RuntimeException(message);
+
+
         }
         return sum;
     }
