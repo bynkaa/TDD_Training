@@ -34,6 +34,7 @@ public class Calculator {
 
                         String delimiter = s1.replace("][","");
                         delimiter = "[" + Pattern.quote(delimiter) + "]";
+
                         String[] listNumbers = s2.split(delimiter);
                         return computeTotalOfListNumbers(listNumbers);
 
