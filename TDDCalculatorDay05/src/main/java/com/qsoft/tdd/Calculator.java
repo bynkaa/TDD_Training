@@ -30,8 +30,19 @@ public class Calculator {
                 if (m2.find()){
                     String s1 = m2.group(1);
                     String s2 = m2.group(2);
-                    String[] listNumbers = s2.split(Pattern.quote(s1));
-                    return computeTotalOfListNumbers(listNumbers);
+                    if (s1.contains("][")){
+
+                        String delimiter = s1.replace("][","");
+                        delimiter = "[" + Pattern.quote(delimiter) + "]";
+                        String[] listNumbers = s2.split(delimiter);
+                        return computeTotalOfListNumbers(listNumbers);
+
+                    }
+                    else {
+                        String[] listNumbers = s2.split(Pattern.quote(s1));
+                        return computeTotalOfListNumbers(listNumbers);
+                    }
+
                 }
             }
             return -1;
