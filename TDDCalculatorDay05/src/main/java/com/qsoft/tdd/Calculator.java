@@ -21,8 +21,18 @@ public class Calculator {
             if (m.find()){
                 String s1 = m.group(1);
                 String s2 = m.group(2);
-                String[] listStrNumbers = s2.split(s1);
+                String[] listStrNumbers = s2.split(Pattern.quote(s1));
                 return computeTotalOfListNumbers(listStrNumbers);
+            }
+            else {
+                String regex2 = "//\\[(.*)\\]\n(.*)";
+                Matcher m2 = Pattern.compile(regex2).matcher(s);
+                if (m2.find()){
+                    String s1 = m2.group(1);
+                    String s2 = m2.group(2);
+                    String[] listNumbers = s2.split(Pattern.quote(s1));
+                    return computeTotalOfListNumbers(listNumbers);
+                }
             }
             return -1;
         }

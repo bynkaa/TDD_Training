@@ -62,4 +62,5 @@ public class TestCalculator {
         assertEquals(6,Calculator.add("//[***]\n1***2***3"));
     }
 
+
 }
