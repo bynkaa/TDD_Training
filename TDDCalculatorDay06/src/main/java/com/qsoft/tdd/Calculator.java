@@ -22,7 +22,7 @@ public class Calculator {
             if (m.find()){
                 String firstSubStringComponent = m.group(1);
                 String secondSubStringComponent = m.group(2);
-                String[] listStrNumber = secondSubStringComponent.split(firstSubStringComponent);
+                String[] listStrNumber = secondSubStringComponent.split(Pattern.quote(firstSubStringComponent));
                 return computeTotalOfAListNumbers(listStrNumber);
             }
             else {
@@ -55,6 +55,17 @@ public class Calculator {
 
         }
 
+    }
+
+    private static int computeTotalOfNumbersKnownFormat(String s, String regex){
+        Matcher m = Pattern.compile(regex).matcher(s);
+        if (m.find()){
+            String firstSubStringComponent = m.group(1);
+            String secondSubStringComponent = m.group(2);
+            String[] listStrNumber = secondSubStringComponent.split(firstSubStringComponent);
+            return computeTotalOfAListNumbers(listStrNumber);
+        }
+        return -1;
     }
     private static int computeTotalOfAListNumbers(String[] listStrNumber){
         int sum = 0;
