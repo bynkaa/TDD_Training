@@ -6,7 +6,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/TestCalculator.java" changelist="b3b8c2e4-0675-403c-9d2c-fe9b94d559ea" time="1370503613257" ignored="false" />
     <file path="/fragment.java" changelist="b3b8c2e4-0675-403c-9d2c-fe9b94d559ea" time="1370501117636" ignored="false" />
-    <file path="/Calculator.java" changelist="b3b8c2e4-0675-403c-9d2c-fe9b94d559ea" time="1370503727048" ignored="false" />
+    <file path="/Calculator.java" changelist="b3b8c2e4-0675-403c-9d2c-fe9b94d559ea" time="1370503915010" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,10 +88,10 @@
       <file leaf-file-name="Calculator.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/tdd/Calculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="34" selection-start="1249" selection-end="1249" vertical-scroll-proportion="0.7017544">
+            <state line="39" column="72" selection-start="1723" selection-end="1723" vertical-scroll-proportion="0.8135965">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1890#1899#0" expanded="true" />
+                <element signature="e#2365#2374#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -503,10 +503,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/tdd/Calculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="34" selection-start="1249" selection-end="1249" vertical-scroll-proportion="0.7017544">
+        <state line="39" column="72" selection-start="1723" selection-end="1723" vertical-scroll-proportion="0.8135965">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1890#1899#0" expanded="true" />
+            <element signature="e#2365#2374#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -32,7 +32,12 @@ public class Calculator {
                     String firstSubStringComponent = m2.group(1);
                     String secondSubStringComponent = m2.group(2);
                     if (firstSubStringComponent.contains("][")){
-                        return -1;
+                        String[] listDelimiters = firstSubStringComponent.split(Pattern.quote("]["));
+                        String delimiter = Pattern.quote(listDelimiters[0]);
+                        for (int  i = 1; i < listDelimiters.length; i++)
+                            delimiter = delimiter + "|" + Pattern.quote(listDelimiters[i]);
+                        String[] listStrNumber = secondSubStringComponent.split(delimiter);
+                        return computeTotalOfAListNumbers(listStrNumber);
                     }
                     else {
                         String[] listStrNumber = secondSubStringComponent.split(Pattern.quote(firstSubStringComponent));
