@@ -24,8 +24,12 @@ public class TestCalculator {
         assertEquals(3,Calculator.add("1,2"));
     }
     @Test
-    public void AddHandleUnknowAmountOfNumbers(){
+    public void testAddHandleUnknowAmountOfNumbers(){
         assertEquals(6,Calculator.add("1,2,3"));
+    }
+    @Test
+    public void testAddHandleNewLinesBetweenNumbers(){
+        assertEquals(6,Calculator.add("1\n2,3"));
     }
 
 
