@@ -31,9 +31,15 @@ public class Calculator {
                 if (m2.find()){
                     String firstSubStringComponent = m2.group(1);
                     String secondSubStringComponent = m2.group(2);
-                    String[] listStrNumber = secondSubStringComponent.split(Pattern.quote(firstSubStringComponent));
-                    return computeTotalOfAListNumbers(listStrNumber);
+                    if (firstSubStringComponent.contains("][")){
+                        return -1;
+                    }
+                    else {
+                        String[] listStrNumber = secondSubStringComponent.split(Pattern.quote(firstSubStringComponent));
+                        return computeTotalOfAListNumbers(listStrNumber);
+                    }
                 }
+
             }
             return -1;
         }
