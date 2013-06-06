@@ -42,7 +42,7 @@ public class Calculator {
             int number = Integer.parseInt(strNumber);
             if (number < 0)
                 listNegativeNumbers.add(number);
-            else
+            else if (number < 1000)
                 sum += number;
 
         }
