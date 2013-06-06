@@ -58,6 +58,10 @@ public class TestCalculator {
     public void testAddWithNumberBiggerThanOneThousand(){
         assertEquals(2,Calculator.add("2,1002"));
     }
+    @Test
+    public void testWithAnyLengthDelimiter(){
+        assertEquals(6,Calculator.add("//[***]\n1***2***3"));
+    }
 
 
 
