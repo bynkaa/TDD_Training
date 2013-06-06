@@ -6,7 +6,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/TestCalculator.java" changelist="b3b8c2e4-0675-403c-9d2c-fe9b94d559ea" time="1370501770715" ignored="false" />
     <file path="/fragment.java" changelist="b3b8c2e4-0675-403c-9d2c-fe9b94d559ea" time="1370501117636" ignored="false" />
-    <file path="/Calculator.java" changelist="b3b8c2e4-0675-403c-9d2c-fe9b94d559ea" time="1370501572178" ignored="false" />
+    <file path="/Calculator.java" changelist="b3b8c2e4-0675-403c-9d2c-fe9b94d559ea" time="1370501818014" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +77,7 @@
       <file leaf-file-name="TestCalculator.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/tdd/TestCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="89" selection-start="699" selection-end="699" vertical-scroll-proportion="0.5899123">
+            <state line="33" column="0" selection-start="821" selection-end="821" vertical-scroll-proportion="0.7763158">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,7 +88,7 @@
       <file leaf-file-name="Calculator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/tdd/Calculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="23" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0">
+            <state line="15" column="50" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -105,8 +105,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qsoft/tdd/Calculator.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/qsoft/tdd/TestCalculator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qsoft/tdd/Calculator.java" />
       </list>
     </option>
   </component>
@@ -414,7 +414,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964131" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32962447" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32962447" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -491,14 +491,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/tdd/Calculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="23" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0">
+        <state line="15" column="50" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/tdd/TestCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="89" selection-start="699" selection-end="699" vertical-scroll-proportion="0.5899123">
+        <state line="33" column="0" selection-start="821" selection-end="821" vertical-scroll-proportion="0.7763158">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
