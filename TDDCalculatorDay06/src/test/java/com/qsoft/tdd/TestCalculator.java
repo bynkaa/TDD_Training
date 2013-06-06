@@ -1,7 +1,7 @@
 package com.qsoft.tdd;
 
-import junit.framework.Assert;
 import org.junit.Test;
+import static junit.framework.Assert.assertEquals;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,7 +13,11 @@ import org.junit.Test;
 public class TestCalculator {
     @Test
     public void testEmptyString(){
-        Assert.assertEquals(0,Calculator.add(""));
+        assertEquals(0, Calculator.add(""));
+    }
+    @Test
+    public void testOneStringNumber(){
+        assertEquals(1,Calculator.add("1"));
     }
 
 }
