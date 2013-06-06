@@ -2,6 +2,7 @@ package com.qsoft.tdd;
 
 import org.junit.Test;
 import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.fail;
 
 /**
  * Created with IntelliJ IDEA.
@@ -34,6 +35,15 @@ public class TestCalculator {
     @Test
     public void testAddWithACustomDelimiter(){
         assertEquals(3,Calculator.add("//;\n1;2"));
+    }
+    @Test
+    public void testAddWithNegativeNumbers(){
+        try{
+            Calculator.add("1,-1");
+            fail();
+        }catch (RuntimeException re){
+            assertEquals("Negattives not allowed",re.getMessage());
+        }
     }
 
 
