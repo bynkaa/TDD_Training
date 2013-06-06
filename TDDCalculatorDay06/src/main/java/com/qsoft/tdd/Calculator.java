@@ -25,6 +25,16 @@ public class Calculator {
                 String[] listStrNumber = secondSubStringComponent.split(firstSubStringComponent);
                 return computeTotalOfAListNumbers(listStrNumber);
             }
+            else {
+                String regex2 = "//\\[(.*)\\]\n(.*)";
+                Matcher m2 = Pattern.compile(regex2).matcher(s);
+                if (m2.find()){
+                    String firstSubStringComponent = m2.group(1);
+                    String secondSubStringComponent = m2.group(2);
+                    String[] listStrNumber = secondSubStringComponent.split(Pattern.quote(firstSubStringComponent));
+                    return computeTotalOfAListNumbers(listStrNumber);
+                }
+            }
             return -1;
         }
         else{
