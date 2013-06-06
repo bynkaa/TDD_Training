@@ -12,8 +12,14 @@ public class Calculator {
 
         if (s.isEmpty())
             return 0;
-        else
-            return Integer.parseInt(s);
+        else{
+            String[] listStrNumber = s.split(",");
+            int sum = 0;
+            for (String strNumber : listStrNumber)
+                sum += Integer.parseInt(strNumber);
+            return sum;
+
+        }
 
     }
 }
