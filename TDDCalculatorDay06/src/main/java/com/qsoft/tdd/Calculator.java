@@ -22,22 +22,22 @@ public class Calculator {
                 String firstSubStringComponent = m.group(1);
                 String secondSubStringComponent = m.group(2);
                 String[] listStrNumber = secondSubStringComponent.split(firstSubStringComponent);
-                int sum = 0;
-                for (String strNumber : listStrNumber)
-                    sum += Integer.parseInt(strNumber);
-                return sum;
+                return computeTotalOfAListNumbers(listStrNumber);
             }
             return -1;
         }
         else{
 
             String[] listStrNumber = s.split("[,\n]");
-            int sum = 0;
-            for (String strNumber : listStrNumber)
-                sum += Integer.parseInt(strNumber);
-            return sum;
+            return computeTotalOfAListNumbers(listStrNumber);
 
         }
 
+    }
+    private static int computeTotalOfAListNumbers(String[] listStrNumber){
+        int sum = 0;
+        for (String strNumber : listStrNumber)
+            sum += Integer.parseInt(strNumber);
+        return sum;
     }
 }
