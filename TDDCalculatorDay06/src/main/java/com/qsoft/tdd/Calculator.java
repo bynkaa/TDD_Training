@@ -10,6 +10,10 @@ package com.qsoft.tdd;
 public class Calculator {
     public static int add(String s) {
 
-        return 0;
+        if (s.isEmpty())
+            return 0;
+        else
+            return Integer.parseInt(s);
+
     }
 }
