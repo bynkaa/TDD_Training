@@ -9,6 +9,12 @@ package com.qsoft.tdd;
  */
 public class BankAccountDao {
     public void create(BankAccountDTO bankAccountDTO) {
-      // do something
+      // do somethings
+    }
+
+    public BankAccountDTO get(String s) {
+        // do somethings
+        return null;
+
     }
 }
