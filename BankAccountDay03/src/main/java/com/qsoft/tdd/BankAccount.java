@@ -13,4 +13,9 @@ public class BankAccount {
     public static void setBankAccountDao(BankAccountDao bankAccountDao) {
         BankAccount.bankAccountDao = bankAccountDao;
     }
+
+    public static void openAccount(String s) {
+        BankAccountDTO bankAccountDTO = new BankAccountDTO(s);
+        bankAccountDao.create(bankAccountDTO);
+    }
 }

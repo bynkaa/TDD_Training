@@ -8,4 +8,7 @@ package com.qsoft.tdd;
  * To change this template use File | Settings | File Templates.
  */
 public class BankAccountDao {
+    public void create(BankAccountDTO bankAccountDTO){
+        // do somethings
+    }
 }
