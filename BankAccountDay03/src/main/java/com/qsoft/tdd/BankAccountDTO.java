@@ -16,6 +16,11 @@ public class BankAccountDTO {
 
     }
 
+    public BankAccountDTO(String accountNumber, long balance) {
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+    }
+
     public String getAccountNumber() {
         return accountNumber;
     }
@@ -26,6 +31,15 @@ public class BankAccountDTO {
 
     public void addBalance(long amount) {
         this.balance += amount;
+
+    }
+
+    public void subtractBalance(long amount) {
+        if (this.balance >= amount){
+             balance -= amount;
+        }
+        else
+            balance = 0L;
 
     }
 }

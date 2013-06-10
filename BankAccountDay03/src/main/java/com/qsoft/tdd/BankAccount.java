@@ -28,4 +28,10 @@ public class BankAccount {
         bankAccountDTO.addBalance(amount);
         bankAccountDao.save(bankAccountDTO);
     }
+
+    public static void withDraw(String accountNumber, long amount, String description) {
+        BankAccountDTO bankAccountDTO = getAccount(accountNumber);
+        bankAccountDTO.subtractBalance(amount);
+        bankAccountDao.save(bankAccountDTO);
+    }
 }
