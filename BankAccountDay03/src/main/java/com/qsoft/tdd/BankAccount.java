@@ -22,4 +22,10 @@ public class BankAccount {
     public static BankAccountDTO getAccount(String accountNumber) {
         return bankAccountDao.get(accountNumber);
     }
+
+    public static void deposit(String accountNumber, long amount, String description) {
+        BankAccountDTO bankAccountDTO = getAccount(accountNumber);
+        bankAccountDTO.addBalance(amount);
+        bankAccountDao.save(bankAccountDTO);
+    }
 }

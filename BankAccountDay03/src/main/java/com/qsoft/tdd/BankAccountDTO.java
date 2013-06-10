@@ -24,4 +24,8 @@ public class BankAccountDTO {
         return balance;
     }
 
+    public void addBalance(long amount) {
+        this.balance += amount;
+
+    }
 }

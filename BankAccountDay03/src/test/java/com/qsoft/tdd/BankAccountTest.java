@@ -36,6 +36,15 @@ public class BankAccountTest {
         when(bankAccountDao.get(b.getAccountNumber())).thenReturn(b);
         assertEquals(b,BankAccount.getAccount(b.getAccountNumber()));
     }
-
+    @Test
+    public void testDeposit(){
+        BankAccountDTO b = new BankAccountDTO("0123456789");
+        when(bankAccountDao.get(b.getAccountNumber())).thenReturn(b);
+        BankAccount.deposit(b.getAccountNumber(),50L,"first deposit");
+        ArgumentCaptor<BankAccountDTO> argument = ArgumentCaptor.forClass(BankAccountDTO.class);
+        verify(bankAccountDao).save(argument.capture());
+        assertEquals("0123456789",argument.getValue().getAccountNumber());
+        assertEquals(50L,argument.getValue().getBalance().longValue());
+    }
 
 }

@@ -16,4 +16,10 @@ public class BankAccountDao {
         // do somethings
         return null;  //To change body of created methods use File | Settings | File Templates.
     }
+
+    public void save(BankAccountDTO bankAccountDTO) {
+        // do somethings
+        //
+
+    }
 }
