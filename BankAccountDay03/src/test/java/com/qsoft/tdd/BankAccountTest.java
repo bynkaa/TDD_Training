@@ -47,4 +47,5 @@ public class BankAccountTest {
         assertEquals(50L,argument.getValue().getBalance().longValue());
     }
 
+
 }
