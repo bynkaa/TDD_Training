@@ -6,6 +6,7 @@ import org.mockito.ArgumentCaptor;
 import static junit.framework.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 /**
  * Created with IntelliJ IDEA.
@@ -28,6 +29,12 @@ public class BankAccountTest {
         verify(bankAccountDao).create(argument.capture());
         assertEquals("0123456789", argument.getValue().getAccountNumber());
         assertEquals(0L,argument.getValue().getBalance().longValue());
+    }
+    @Test
+    public void testGetAccount(){
+        BankAccountDTO b = new BankAccountDTO("0123456789");
+        when(bankAccountDao.get(b.getAccountNumber())).thenReturn(b);
+        assertEquals(b,BankAccount.getAccount(b.getAccountNumber()));
     }
 
 

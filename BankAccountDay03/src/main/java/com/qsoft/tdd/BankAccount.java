@@ -18,4 +18,8 @@ public class BankAccount {
         BankAccountDTO bankAccountDTO = new BankAccountDTO(s);
         bankAccountDao.create(bankAccountDTO);
     }
+
+    public static BankAccountDTO getAccount(String accountNumber) {
+        return bankAccountDao.get(accountNumber);
+    }
 }

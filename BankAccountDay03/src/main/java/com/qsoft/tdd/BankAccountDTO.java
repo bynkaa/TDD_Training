@@ -23,4 +23,5 @@ public class BankAccountDTO {
     public Long getBalance() {
         return balance;
     }
+
 }
