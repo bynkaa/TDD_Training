@@ -8,4 +8,9 @@ package com.qsoft.tdd;
  * To change this template use File | Settings | File Templates.
  */
 public class TransactionDao {
+    public void save(TransactionDTO capture) {
+        // do somethings
+        //
+
+    }
 }

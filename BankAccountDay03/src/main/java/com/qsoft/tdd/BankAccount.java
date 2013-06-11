@@ -1,5 +1,8 @@
 package com.qsoft.tdd;
 
+import java.util.Calendar;
+import java.util.Date;
+
 /**
  * Created with IntelliJ IDEA.
  * User: BinkaA
@@ -9,7 +12,6 @@ package com.qsoft.tdd;
  */
 public class BankAccount {
     private static BankAccountDao bankAccountDao;
-
     public static void setBankAccountDao(BankAccountDao bankAccountDao) {
         BankAccount.bankAccountDao = bankAccountDao;
     }
@@ -27,6 +29,8 @@ public class BankAccount {
         BankAccountDTO bankAccountDTO = getAccount(accountNumber);
         bankAccountDTO.addBalance(amount);
         bankAccountDao.save(bankAccountDTO);
+        Transaction.save(accountNumber,amount,description);
+
     }
 
     public static void withDraw(String accountNumber, long amount, String description) {
