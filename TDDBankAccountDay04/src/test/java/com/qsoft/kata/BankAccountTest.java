@@ -38,4 +38,16 @@ public class BankAccountTest {
         assertEquals(b,BankAccount.getAccount("1234567890"));
         verify(bankAccountDao,times(1)).get("1234567890");
     }
+    @Test
+    public void testBankAccountDeposit(){
+        BankAccountDTO b = new BankAccountDTO("1234567890");
+        when(bankAccountDao.get("1234567890")).thenReturn(b);
+        BankAccount.deposit("1234567890",50L,"first deposit");
+        ArgumentCaptor<BankAccountDTO> argument = ArgumentCaptor.forClass(BankAccountDTO.class);
+        verify(bankAccountDao,times(1)).save(argument.capture());
+        assertEquals("1234567890",argument.getValue().getAccountNumber());
+        assertEquals(50L,argument.getValue().getBalance());
+
+
+    }
 }

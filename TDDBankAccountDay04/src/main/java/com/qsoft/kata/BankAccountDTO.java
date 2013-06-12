@@ -9,7 +9,7 @@ package com.qsoft.kata;
  */
 public class BankAccountDTO {
     private String accountNumber;
-    private int balance;
+    private long balance;
 
     public BankAccountDTO(String accountNumber) {
         this.accountNumber = accountNumber;
@@ -21,7 +21,7 @@ public class BankAccountDTO {
         return accountNumber;
     }
 
-    public int getBalance() {
+    public long getBalance() {
         return balance;
     }
     public boolean equals(Object o){
@@ -29,5 +29,9 @@ public class BankAccountDTO {
             return true;
         BankAccountDTO b = (BankAccountDTO) o;
         return accountNumber.equals(b.accountNumber) && balance == b.balance;
+    }
+
+    public void setBalance(long balance) {
+        this.balance = balance;
     }
 }
