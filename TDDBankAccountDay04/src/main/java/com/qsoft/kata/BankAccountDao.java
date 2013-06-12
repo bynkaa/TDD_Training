@@ -11,4 +11,8 @@ public class BankAccountDao {
     public void create(BankAccountDTO capture) {
         //
     }
+
+    public BankAccountDTO get(String s) {
+        return null;  //To change body of created methods use File | Settings | File Templates.
+    }
 }

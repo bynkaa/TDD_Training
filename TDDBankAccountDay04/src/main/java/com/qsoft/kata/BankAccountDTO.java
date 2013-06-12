@@ -13,7 +13,7 @@ public class BankAccountDTO {
 
     public BankAccountDTO(String accountNumber) {
         this.accountNumber = accountNumber;
-        this.balance = balance;
+        this.balance = 0;
 
     }
 
@@ -23,5 +23,11 @@ public class BankAccountDTO {
 
     public int getBalance() {
         return balance;
+    }
+    public boolean equals(Object o){
+        if (o == this)
+            return true;
+        BankAccountDTO b = (BankAccountDTO) o;
+        return accountNumber.equals(b.accountNumber) && balance == b.balance;
     }
 }

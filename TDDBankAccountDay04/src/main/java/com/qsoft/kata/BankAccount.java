@@ -19,4 +19,9 @@ public class BankAccount {
         bankAccountDao.create(bankAccountDTO);
 
     }
+
+    public static BankAccountDTO getAccount(String accountNumber) {
+        //To change body of created methods use File | Settings | File Templates.
+        return null;
+    }
 }
