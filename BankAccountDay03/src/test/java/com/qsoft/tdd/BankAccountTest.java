@@ -33,7 +33,7 @@ public class BankAccountTest {
     public void testOpenNewAccount(){
         BankAccount.openAccount("0123456789");
         ArgumentCaptor<BankAccountDTO> argument = ArgumentCaptor.forClass(BankAccountDTO.class);
-        verify(bankAccountDao).create(argument.capture());
+        verify(bankAccountDao,times(1)).create(argument.capture());
         assertEquals("0123456789", argument.getValue().getAccountNumber());
         assertEquals(0L,argument.getValue().getBalance().longValue());
     }
@@ -41,6 +41,7 @@ public class BankAccountTest {
     public void testGetAccount(){
         BankAccountDTO b = new BankAccountDTO("0123456789");
         when(bankAccountDao.get("0123456789")).thenReturn(b);
+        //verify(bankAccountDao,times(1)).get("0123456789");
         assertEquals(b,BankAccount.getAccount(b.getAccountNumber()));
     }
     @Test
@@ -49,7 +50,7 @@ public class BankAccountTest {
         when(bankAccountDao.get(b.getAccountNumber())).thenReturn(b);
         BankAccount.deposit(b.getAccountNumber(),50L,"first deposit");
         ArgumentCaptor<BankAccountDTO> argument = ArgumentCaptor.forClass(BankAccountDTO.class);
-        verify(bankAccountDao).save(argument.capture());
+        verify(bankAccountDao,times(1)).save(argument.capture());
         assertEquals("0123456789",argument.getValue().getAccountNumber());
         assertEquals(50L,argument.getValue().getBalance().longValue());
     }
@@ -73,7 +74,7 @@ public class BankAccountTest {
         when(calendar.getTimeInMillis()).thenReturn(timeStamp);
         BankAccount.deposit("0123456789",50L,"first deposit");
         ArgumentCaptor<TransactionDTO> argument = ArgumentCaptor.forClass(TransactionDTO.class);
-        verify(transactionDao).save(argument.capture());
+        verify(transactionDao,times(1)).save(argument.capture());
         assertEquals("0123456789",argument.getValue().getAccountNumber());
         assertEquals(50L,argument.getValue().getAmount());
         assertEquals("first deposit", argument.getValue().getDescription());
