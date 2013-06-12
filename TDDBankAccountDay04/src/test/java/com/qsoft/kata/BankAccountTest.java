@@ -33,7 +33,6 @@ public class BankAccountTest {
     //
     @Test
     public void testGetAccount(){
-        BankAccount.getAccount("1234567890");
         BankAccountDTO b = new BankAccountDTO("1234567890");
         when(bankAccountDao.get("1234567890")).thenReturn(b);
         assertEquals(b,BankAccount.getAccount("1234567890"));
