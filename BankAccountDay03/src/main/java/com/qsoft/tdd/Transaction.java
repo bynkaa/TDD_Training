@@ -2,6 +2,7 @@ package com.qsoft.tdd;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -20,12 +21,24 @@ public class Transaction {
 
     public static void save(String accountNumber, long amount, String description) {
         Long timeStamp = calendar.getTimeInMillis();
-        System.out.println(timeStamp);
-        TransactionDTO transactionDTO = new TransactionDTO(accountNumber,amount,timeStamp,description);
+        TransactionDTO transactionDTO = new TransactionDTO(accountNumber,timeStamp,amount,description);
         transactionDao.save(transactionDTO);
+
     }
 
     public static void setCalendar(Calendar calendar) {
         Transaction.calendar = calendar;
+    }
+    //
+    public static List<TransactionDTO> getTransactions(String accountNumber) {
+        return transactionDao.get(accountNumber);
+    }
+    //
+    public static List<TransactionDTO> getTransactions(String accountNumber,long startTime, long stopTime){
+        return transactionDao.get(accountNumber,startTime,stopTime);
+    }
+    //
+    public static List<TransactionDTO> getTransactions(String accountNumber,Integer number){
+        return transactionDao.get(accountNumber,number);
     }
 }

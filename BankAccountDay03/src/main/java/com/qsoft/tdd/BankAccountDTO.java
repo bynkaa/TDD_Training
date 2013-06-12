@@ -29,17 +29,7 @@ public class BankAccountDTO {
         return balance;
     }
 
-    public void addBalance(long amount) {
-        this.balance += amount;
-
-    }
-
-    public void subtractBalance(long amount) {
-        if (this.balance >= amount){
-             balance -= amount;
-        }
-        else
-            balance = 0L;
-
+    public void setBalance(long balance) {
+        this.balance = balance;
     }
 }

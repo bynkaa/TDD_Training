@@ -15,7 +15,7 @@ public class TransactionDTO {
     private Long timeStamp;
     private String description;
 
-    public TransactionDTO(String accountNumber, long amount, Long timeStamp, String description ) {
+    public TransactionDTO(String accountNumber, Long timeStamp, long amount, String description ) {
         this.accountNumber = accountNumber;
         this.amount = amount;
         this.timeStamp = timeStamp;

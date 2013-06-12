@@ -9,9 +9,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 import static junit.framework.Assert.assertEquals;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -32,7 +30,6 @@ public class TransactionTest {
     public void testSaveTransaction(){
         //long timeStamp = Calendar.getInstance().getTimeInMillis();
         long timeStamp = 10000L;
-
         when(calendar.getTimeInMillis()).thenReturn(timeStamp);
         Transaction.save("123456789",50L,"first deposit");
         ArgumentCaptor<TransactionDTO> argument = ArgumentCaptor.forClass(TransactionDTO.class);
@@ -41,8 +38,8 @@ public class TransactionTest {
         assertEquals(50L,argument.getValue().getAmount());
         assertEquals(timeStamp,argument.getValue().getTimeStamp(),100);
         assertEquals("first deposit",argument.getValue().getDescription());
-
     }
+
 
 
 }

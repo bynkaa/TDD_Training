@@ -2,6 +2,7 @@ package com.qsoft.tdd;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -27,15 +28,29 @@ public class BankAccount {
 
     public static void deposit(String accountNumber, long amount, String description) {
         BankAccountDTO bankAccountDTO = getAccount(accountNumber);
-        bankAccountDTO.addBalance(amount);
+        bankAccountDTO.setBalance(bankAccountDTO.getBalance() + amount);
         bankAccountDao.save(bankAccountDTO);
+        //
         Transaction.save(accountNumber,amount,description);
-
     }
 
     public static void withDraw(String accountNumber, long amount, String description) {
         BankAccountDTO bankAccountDTO = getAccount(accountNumber);
-        bankAccountDTO.subtractBalance(amount);
+        bankAccountDTO.setBalance(bankAccountDTO.getBalance() - amount);
         bankAccountDao.save(bankAccountDTO);
+        //
+        Transaction.save(accountNumber,-amount,description);
+    }
+
+    public static List<TransactionDTO> getTransactions(String accountNumber) {
+        return Transaction.getTransactions(accountNumber);
+    }
+    //
+    public static List<TransactionDTO> getTransactions(String accountNumber,long startTime,long stopTime) {
+        return Transaction.getTransactions(accountNumber,startTime,stopTime);
+    }
+    //
+    public static List<TransactionDTO> getTransactions(String accountNumber, Integer number){
+        return Transaction.getTransactions(accountNumber,number);
     }
 }
