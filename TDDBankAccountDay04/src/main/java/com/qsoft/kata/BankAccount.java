@@ -14,7 +14,9 @@ public class BankAccount {
         BankAccount.bankAccountDao = bankAccountDao;
     }
 
-    public static void open(String s) {
-        //To change body of created methods use File | Settings | File Templates.
+    public static void open(String accountNumber) {
+        BankAccountDTO bankAccountDTO = new BankAccountDTO(accountNumber);
+        bankAccountDao.create(bankAccountDTO);
+
     }
 }

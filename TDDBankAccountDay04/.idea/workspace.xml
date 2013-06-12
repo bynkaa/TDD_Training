@@ -6,8 +6,9 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/BankAccountTest.java" changelist="8d71b8e7-4b97-49bf-b526-ab170e829a73" time="1371020275090" ignored="false" />
     <file path="/fragment.java" changelist="8d71b8e7-4b97-49bf-b526-ab170e829a73" time="1371020140373" ignored="false" />
-    <file path="/BankAccount.java" changelist="8d71b8e7-4b97-49bf-b526-ab170e829a73" time="1371020063528" ignored="false" />
+    <file path="/BankAccount.java" changelist="8d71b8e7-4b97-49bf-b526-ab170e829a73" time="1371020484907" ignored="false" />
     <file path="/BankAccountDao.java" changelist="8d71b8e7-4b97-49bf-b526-ab170e829a73" time="1371020178721" ignored="false" />
+    <file path="/BankAccountDTO.java" changelist="8d71b8e7-4b97-49bf-b526-ab170e829a73" time="1371020463639" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +79,7 @@
       <file leaf-file-name="BankAccountTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/kata/BankAccountTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="27" selection-start="656" selection-end="656" vertical-scroll-proportion="0.40350878">
+            <state line="32" column="27" selection-start="1013" selection-end="1013" vertical-scroll-proportion="0.6644737">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -89,7 +90,7 @@
       <file leaf-file-name="BankAccountDTO.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/kata/BankAccountDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="29" selection-start="374" selection-end="374" vertical-scroll-proportion="0.0">
+            <state line="15" column="17" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -98,7 +99,7 @@
       <file leaf-file-name="BankAccount.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/kata/BankAccount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="8" selection-start="439" selection-end="512" vertical-scroll-proportion="0.0">
+            <state line="18" column="46" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -124,10 +125,10 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qsoft/kata/BankAccount.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/kata/BankAccountDao.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/qsoft/kata/BankAccountTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/kata/BankAccountDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qsoft/kata/BankAccount.java" />
       </list>
     </option>
   </component>
@@ -248,6 +249,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kata" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -503,9 +508,16 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/kata/BankAccount.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="8" selection-start="439" selection-end="512" vertical-scroll-proportion="0.0">
+        <state line="22" column="19" selection-start="800" selection-end="800" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/kata/BankAccountDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="17" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -517,23 +529,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/kata/BankAccount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="19" selection-start="800" selection-end="800" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/kata/BankAccountDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="29" selection-start="374" selection-end="374" vertical-scroll-proportion="0.0">
+        <state line="18" column="46" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/kata/BankAccountTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="27" selection-start="656" selection-end="656" vertical-scroll-proportion="0.40350878">
+        <state line="32" column="27" selection-start="1013" selection-end="1013" vertical-scroll-proportion="0.6644737">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

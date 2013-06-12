@@ -11,6 +11,12 @@ public class BankAccountDTO {
     private String accountNumber;
     private int balance;
 
+    public BankAccountDTO(String accountNumber) {
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+
+    }
+
     public String getAccountNumber() {
         return accountNumber;
     }
