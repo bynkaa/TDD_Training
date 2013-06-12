@@ -41,8 +41,8 @@ public class BankAccountTest {
     public void testGetAccount(){
         BankAccountDTO b = new BankAccountDTO("0123456789");
         when(bankAccountDao.get("0123456789")).thenReturn(b);
-        //verify(bankAccountDao,times(1)).get("0123456789");
         assertEquals(b,BankAccount.getAccount(b.getAccountNumber()));
+        verify(bankAccountDao,times(1)).get("0123456789");
     }
     @Test
     public void testDeposit(){
