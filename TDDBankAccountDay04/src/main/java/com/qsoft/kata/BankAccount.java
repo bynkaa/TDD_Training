@@ -28,5 +28,6 @@ public class BankAccount {
         BankAccountDTO b = bankAccountDao.get(accountNumber);
         b.setBalance(b.getBalance() + amount);
         bankAccountDao.save(b);
+        Transaction.save(accountNumber,amount,description);
     }
 }

@@ -4,11 +4,14 @@
     <list default="true" id="8d71b8e7-4b97-49bf-b526-ab170e829a73" name="Default" comment="" />
     <ignored path="TDDBankAccountDay04.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/BankAccountTest.java" changelist="8d71b8e7-4b97-49bf-b526-ab170e829a73" time="1371106196531" ignored="false" />
-    <file path="/fragment.java" changelist="8d71b8e7-4b97-49bf-b526-ab170e829a73" time="1371020140373" ignored="false" />
-    <file path="/BankAccount.java" changelist="8d71b8e7-4b97-49bf-b526-ab170e829a73" time="1371021698684" ignored="false" />
+    <file path="/BankAccountTest.java" changelist="8d71b8e7-4b97-49bf-b526-ab170e829a73" time="1371107215550" ignored="false" />
+    <file path="/fragment.java" changelist="8d71b8e7-4b97-49bf-b526-ab170e829a73" time="1371106722478" ignored="false" />
+    <file path="/BankAccount.java" changelist="8d71b8e7-4b97-49bf-b526-ab170e829a73" time="1371106636661" ignored="false" />
     <file path="/BankAccountDao.java" changelist="8d71b8e7-4b97-49bf-b526-ab170e829a73" time="1371021704255" ignored="false" />
     <file path="/BankAccountDTO.java" changelist="8d71b8e7-4b97-49bf-b526-ab170e829a73" time="1371021667668" ignored="false" />
+    <file path="/Transaction.java" changelist="8d71b8e7-4b97-49bf-b526-ab170e829a73" time="1371107125517" ignored="false" />
+    <file path="/TransactionDTO.java" changelist="8d71b8e7-4b97-49bf-b526-ab170e829a73" time="1371106790616" ignored="false" />
+    <file path="/TransactionDao.java" changelist="8d71b8e7-4b97-49bf-b526-ab170e829a73" time="1371106863239" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +82,7 @@
       <file leaf-file-name="BankAccountTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/kata/BankAccountTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="53" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.4848485">
+            <state line="65" column="62" selection-start="2644" selection-end="2644" vertical-scroll-proportion="0.7577197">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,10 +90,37 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Transaction.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/kata/Transaction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="19" selection-start="822" selection-end="822" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransactionDTO.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/kata/TransactionDTO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="4" selection-start="633" selection-end="633" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransactionDao.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/kata/TransactionDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="10" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="BankAccountDTO.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/kata/BankAccountDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="15" selection-start="489" selection-end="489" vertical-scroll-proportion="0.0">
+            <state line="19" column="18" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -126,8 +156,11 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/kata/BankAccountDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qsoft/kata/BankAccount.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/kata/BankAccountDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qsoft/kata/BankAccount.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qsoft/kata/TransactionDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qsoft/kata/TransactionDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qsoft/kata/Transaction.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/qsoft/kata/BankAccountTest.java" />
       </list>
     </option>
@@ -276,7 +309,7 @@
       <recent name="com.qsoft.kata" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BankAccountTest.testGetAccount">
+  <component name="RunManager" selected="JUnit.BankAccountTest.testDepositTransactionShouldBeSaveToDB">
     <configuration default="false" name="BankAccountTest.testOpenNewAccount" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -389,6 +422,34 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="BankAccountTest.testDepositTransactionShouldBeSaveToDB" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.qsoft.kata.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="TDDBankAccountDay04" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.qsoft.kata" />
+      <option name="MAIN_CLASS_NAME" value="com.qsoft.kata.BankAccountTest" />
+      <option name="METHOD_NAME" value="testDepositTransactionShouldBeSaveToDB" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -480,18 +541,20 @@
       <patterns />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testOpenNewAccount" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testGetAccount" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.BankAccountTest" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testBankAccountDeposit" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testDepositTransactionShouldBeSaveToDB" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testGetAccount" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testBankAccountDeposit" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.BankAccountTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testOpenNewAccount" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testDepositTransactionShouldBeSaveToDB" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testGetAccount" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testBankAccountDeposit" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.BankAccountTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testOpenNewAccount" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -523,14 +586,14 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24892396" sideWeight="0.9652295" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34955752" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24892396" sideWeight="0.65090406" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34909597" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -635,6 +698,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="19" selection-start="800" selection-end="800" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/kata/BankAccountDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="8" selection-start="470" selection-end="543" vertical-scroll-proportion="0.0">
@@ -644,14 +714,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/kata/BankAccountDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="15" selection-start="489" selection-end="489" vertical-scroll-proportion="0.0">
+        <state line="19" column="18" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/kata/TransactionDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="19" selection-start="800" selection-end="800" vertical-scroll-proportion="0.0">
+        <state line="26" column="4" selection-start="633" selection-end="633" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/kata/TransactionDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="10" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/kata/Transaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="19" selection-start="822" selection-end="822" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -665,7 +749,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/kata/BankAccountTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="53" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.4848485">
+        <state line="65" column="62" selection-start="2644" selection-end="2644" vertical-scroll-proportion="0.7577197">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

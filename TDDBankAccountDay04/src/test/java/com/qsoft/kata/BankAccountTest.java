@@ -4,6 +4,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;
 
+import java.util.Calendar;
+
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
@@ -16,9 +18,13 @@ import static org.mockito.Mockito.*;
  */
 public class BankAccountTest {
     BankAccountDao bankAccountDao = mock(BankAccountDao.class);
+    TransactionDao transactionDao = mock(TransactionDao.class);
+    Calendar calendar = mock(Calendar.class);
     @Before
     public void setUp(){
         BankAccount.setBankAccountDao(bankAccountDao);
+        Transaction.setTransactionDao(transactionDao);
+        Transaction.setCalendar(calendar);
     }
     //
     @Test
@@ -34,7 +40,7 @@ public class BankAccountTest {
     public void testGetAccount(){
         BankAccountDTO b = new BankAccountDTO("1234567890");
         BankAccount.getAccount(b.getAccountNumber());
-        verify(bankAccountDao,times(1)).get("1234567890");
+        verify(bankAccountDao, times(1)).get("1234567890");
     }
     //
     @Test
@@ -46,6 +52,19 @@ public class BankAccountTest {
         verify(bankAccountDao,times(1)).save(argument.capture());
         assertEquals("1234567890",argument.getValue().getAccountNumber());
         assertEquals(50L,argument.getValue().getBalance());
+    }
+    @Test
+    public void testDepositTransactionShouldBeSaveToDB(){
+        BankAccountDTO b = new BankAccountDTO("1234567890");
+        when(bankAccountDao.get(b.getAccountNumber())).thenReturn(b);
+        when(calendar.getTimeInMillis()).thenReturn(100L);
+        BankAccount.deposit("1234567890",50L,"first deposit");
+        ArgumentCaptor<TransactionDTO> argument = ArgumentCaptor.forClass(TransactionDTO.class);
+        verify(transactionDao,times(1)).save(argument.capture());
+        assertEquals(b.getAccountNumber(),argument.getValue().getAccountNumber());
+        assertEquals(50L,argument.getValue().getAmount());
+        assertEquals(100L,argument.getValue().getTimeStamp());
+
     }
 
 }
