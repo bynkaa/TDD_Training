@@ -1,6 +1,5 @@
 package com.qsoft.kata;
 
-import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;
@@ -34,10 +33,10 @@ public class BankAccountTest {
     @Test
     public void testGetAccount(){
         BankAccountDTO b = new BankAccountDTO("1234567890");
-        when(bankAccountDao.get("1234567890")).thenReturn(b);
-        assertEquals(b,BankAccount.getAccount("1234567890"));
+        BankAccount.getAccount(b.getAccountNumber());
         verify(bankAccountDao,times(1)).get("1234567890");
     }
+    //
     @Test
     public void testBankAccountDeposit(){
         BankAccountDTO b = new BankAccountDTO("1234567890");
@@ -47,7 +46,6 @@ public class BankAccountTest {
         verify(bankAccountDao,times(1)).save(argument.capture());
         assertEquals("1234567890",argument.getValue().getAccountNumber());
         assertEquals(50L,argument.getValue().getBalance());
-
-
     }
+
 }
