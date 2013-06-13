@@ -38,4 +38,9 @@ public class BankAccount {
         bankAccountDao.save(b);
         Transaction.save(accountNumber,amount,accountNumber);
     }
+
+    public static void getTransactionOccured(String acountNumber) {
+        Transaction.getTransactions(acountNumber);
+
+    }
 }

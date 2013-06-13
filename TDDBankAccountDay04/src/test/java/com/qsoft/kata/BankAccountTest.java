@@ -91,4 +91,9 @@ public class BankAccountTest {
         assertEquals(100L,argument.getValue().getTimeStamp());
     }
 
+    @Test
+    public void testGetTransactionOccured(){
+        BankAccount.getTransactionOccured("1234567890");
+    }
+
 }

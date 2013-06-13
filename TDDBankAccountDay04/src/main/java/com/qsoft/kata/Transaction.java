@@ -26,4 +26,9 @@ public class Transaction {
         TransactionDTO transactionDTO = new TransactionDTO(accountNumber,timeStamp,amount,description);
         transactionDao.save(transactionDTO);
     }
+
+    public static void getTransactions(String accountNumber) {
+        transactionDao.get(accountNumber);
+
+    }
 }

@@ -11,4 +11,8 @@ public class TransactionDao {
     public void save(TransactionDTO transactionDTO) {
         //To change body of created methods use File | Settings | File Templates.
     }
+
+    public void get(String accountNumber) {
+        //To change body of created methods use File | Settings | File Templates.
+    }
 }
