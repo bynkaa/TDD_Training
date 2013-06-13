@@ -25,17 +25,17 @@ public class BankAccount {
     }
 
     public static void deposit(String accountNumber, long amount, String description) {
-        BankAccountDTO b = bankAccountDao.get(accountNumber);
-        b.setBalance(b.getBalance() + amount);
-        bankAccountDao.save(b);
-        Transaction.save(accountNumber,amount,description);
+        doTransaction(accountNumber,amount,description);
     }
 
     public static void withDraw(String accountNumber, long amount, String description) {
-        BankAccountDTO b = bankAccountDao.get(accountNumber);
-        b.setBalance(b.getBalance() - amount);
-        bankAccountDao.save(b);
-        Transaction.save(accountNumber,-amount,accountNumber);
+        doTransaction(accountNumber,-amount,description);
+    }
 
+    private static void doTransaction(String accountNumber,long amount,String description){
+        BankAccountDTO b = bankAccountDao.get(accountNumber);
+        b.setBalance(b.getBalance() + amount);
+        bankAccountDao.save(b);
+        Transaction.save(accountNumber,amount,accountNumber);
     }
 }

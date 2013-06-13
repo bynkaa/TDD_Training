@@ -83,7 +83,7 @@ public class BankAccountTest {
         BankAccountDTO b = new BankAccountDTO("1234567890");
         when(bankAccountDao.get(b.getAccountNumber())).thenReturn(b);
         when(calendar.getTimeInMillis()).thenReturn(100L);
-        BankAccount.withDraw("1234567890",50L,"first deposit");
+        BankAccount.withDraw("1234567890",50L,"first withdraw");
         ArgumentCaptor<TransactionDTO> argument = ArgumentCaptor.forClass(TransactionDTO.class);
         verify(transactionDao,times(1)).save(argument.capture());
         assertEquals(b.getAccountNumber(),argument.getValue().getAccountNumber());
