@@ -35,6 +35,7 @@ public class BankAccountTest {
     //
     @Test
     public void testOpenNewAccount(){
+
         BankAccount.open("1234567890");
         ArgumentCaptor<BankAccountDTO> argument = ArgumentCaptor.forClass(BankAccountDTO.class);
         verify(bankAccountDao,times(1)).create(argument.capture());
@@ -52,24 +53,34 @@ public class BankAccountTest {
     //
     @Test
     public void testBankAccountDeposit(){
+        // stub a bankAccount
         BankAccountDTO b = BankAccount.open(accountNumber);
         when(bankAccountDao.get("1234567890")).thenReturn(b);
+        //
         BankAccount.deposit("1234567890",50L,"first deposit");
+        // verify
         ArgumentCaptor<BankAccountDTO> argument = ArgumentCaptor.forClass(BankAccountDTO.class);
         verify(bankAccountDao,times(1)).save(argument.capture());
         assertEquals("1234567890",argument.getValue().getAccountNumber());
         assertEquals(50L,argument.getValue().getBalance());
     }
-    //
-    @Test
-    public void testDepositTransactionShouldBeSaveToDB(){
+
+    public void stubATransaction(){
         BankAccountDTO b = BankAccount.open(accountNumber);
         when(bankAccountDao.get(b.getAccountNumber())).thenReturn(b);
         when(calendar.getTimeInMillis()).thenReturn(100L);
-        BankAccount.deposit("1234567890",50L,"first deposit");
+    }
+    //
+    @Test
+    public void testDepositTransactionShouldBeSaveToDB(){
+        // stub a transaction
+        stubATransaction();
+        BankAccount.deposit(accountNumber,50L,"first deposit");
+        //
         ArgumentCaptor<TransactionDTO> argument = ArgumentCaptor.forClass(TransactionDTO.class);
+        // verify
         verify(transactionDao,times(1)).save(argument.capture());
-        assertEquals(b.getAccountNumber(),argument.getValue().getAccountNumber());
+        assertEquals(accountNumber,argument.getValue().getAccountNumber());
         assertEquals(50L,argument.getValue().getAmount());
         assertEquals(100L,argument.getValue().getTimeStamp());
 
@@ -77,10 +88,13 @@ public class BankAccountTest {
 
     @Test
     public void testBankAccountWithDraw(){
+        // stub a bank account
         BankAccountDTO b = BankAccount.open(accountNumber);
         when(bankAccountDao.get("1234567890")).thenReturn(b);
+        //--
         BankAccount.withDraw("1234567890",50L,"first withdraw");
         ArgumentCaptor<BankAccountDTO> argument = ArgumentCaptor.forClass(BankAccountDTO.class);
+        // verify
         verify(bankAccountDao).save(argument.capture());
         assertEquals("1234567890",argument.getValue().getAccountNumber());
         assertEquals(-50L,argument.getValue().getBalance());
@@ -88,16 +102,18 @@ public class BankAccountTest {
 
     @Test
     public void testWithDrawTransactionShouldBeSaveToDB(){
-        BankAccountDTO b = BankAccount.open(accountNumber);
-        when(bankAccountDao.get(b.getAccountNumber())).thenReturn(b);
-        when(calendar.getTimeInMillis()).thenReturn(100L);
-        BankAccount.withDraw("1234567890",50L,"first withdraw");
+        // stub a bank account
+        stubATransaction();
+        //
+        BankAccount.withDraw(accountNumber,50L,"first withdraw");
         ArgumentCaptor<TransactionDTO> argument = ArgumentCaptor.forClass(TransactionDTO.class);
+        // verify
         verify(transactionDao).save(argument.capture());
-        assertEquals(b.getAccountNumber(),argument.getValue().getAccountNumber());
+        assertEquals(accountNumber,argument.getValue().getAccountNumber());
         assertEquals(-50L,argument.getValue().getAmount());
         assertEquals(100L,argument.getValue().getTimeStamp());
     }
+    //
     public void createListTransactions(){
         BankAccountDTO bankAccountDTO = BankAccount.open(accountNumber);
         when(bankAccountDao.get(accountNumber)).thenReturn(bankAccountDTO);
@@ -107,7 +123,7 @@ public class BankAccountTest {
     }
 
     @Test
-    public void testGetTransactionOccured(){
+    public void testGetTransactionOccurred(){
 
         ArgumentCaptor<TransactionDTO> transactionRecords = ArgumentCaptor.forClass(TransactionDTO.class);
         createListTransactions();
@@ -129,7 +145,7 @@ public class BankAccountTest {
         assertEquals(savedRecords,actualRecords);
     }
     @Test
-    public void testGetNewestNtransactions(){
+    public void testGetNewestNTransactions(){
         ArgumentCaptor<TransactionDTO> transactionRecords = ArgumentCaptor.forClass(TransactionDTO.class);
         createListTransactions();
         verify(transactionDao,times(2)).save(transactionRecords.capture());

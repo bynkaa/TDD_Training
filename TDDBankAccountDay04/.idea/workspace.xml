@@ -4,7 +4,7 @@
     <list default="true" id="8d71b8e7-4b97-49bf-b526-ab170e829a73" name="Default" comment="" />
     <ignored path="TDDBankAccountDay04.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/BankAccountTest.java" changelist="8d71b8e7-4b97-49bf-b526-ab170e829a73" time="1371232282678" ignored="false" />
+    <file path="/BankAccountTest.java" changelist="8d71b8e7-4b97-49bf-b526-ab170e829a73" time="1371232959136" ignored="false" />
     <file path="/fragment.java" changelist="8d71b8e7-4b97-49bf-b526-ab170e829a73" time="1371106722478" ignored="false" />
     <file path="/BankAccount.java" changelist="8d71b8e7-4b97-49bf-b526-ab170e829a73" time="1371232322578" ignored="false" />
     <file path="/BankAccountDao.java" changelist="8d71b8e7-4b97-49bf-b526-ab170e829a73" time="1371021704255" ignored="false" />
@@ -82,7 +82,7 @@
       <file leaf-file-name="BankAccountTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/kata/BankAccountTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="136" column="18" selection-start="5978" selection-end="5978" vertical-scroll-proportion="0.5961995">
+            <state line="150" column="17" selection-start="5969" selection-end="5969" vertical-scroll-proportion="0.9192399">
               <folding />
             </state>
           </provider>
@@ -309,35 +309,7 @@
       <recent name="com.qsoft.kata" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BankAccountTest.testGetNewestNtransactions">
-    <configuration default="false" name="BankAccountTest.testBankAccountWithDrawTransactionShouldBeSaveToDB" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.qsoft.kata.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="TDDBankAccountDay04" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.qsoft.kata" />
-      <option name="MAIN_CLASS_NAME" value="com.qsoft.kata.BankAccountTest" />
-      <option name="METHOD_NAME" value="testBankAccountWithDrawTransactionShouldBeSaveToDB" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.BankAccountTest">
     <configuration default="false" name="BankAccountTest" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -450,6 +422,34 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="BankAccountTest.testWithDrawTransactionShouldBeSaveToDB" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.qsoft.kata.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="TDDBankAccountDay04" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.qsoft.kata" />
+      <option name="MAIN_CLASS_NAME" value="com.qsoft.kata.BankAccountTest" />
+      <option name="METHOD_NAME" value="testWithDrawTransactionShouldBeSaveToDB" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -542,19 +542,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testBankAccountWithDrawTransactionShouldBeSaveToDB" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.BankAccountTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testGetTransactionOccured" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testGetTransactionInAPeriod" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testGetNewestNtransactions" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.BankAccountTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testGetTransactionOccured" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testGetTransactionInAPeriod" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testGetNewestNtransactions" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testWithDrawTransactionShouldBeSaveToDB" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testGetNewestNtransactions" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testGetTransactionInAPeriod" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testGetTransactionOccured" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.BankAccountTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testBankAccountWithDrawTransactionShouldBeSaveToDB" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.BankAccountTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testWithDrawTransactionShouldBeSaveToDB" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testGetNewestNtransactions" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testGetTransactionInAPeriod" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testGetTransactionOccured" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -770,7 +770,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/kata/BankAccountTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="18" selection-start="5978" selection-end="5978" vertical-scroll-proportion="0.5961995">
+        <state line="150" column="17" selection-start="5969" selection-end="5969" vertical-scroll-proportion="0.9192399">
           <folding />
         </state>
       </provider>
