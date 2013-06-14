@@ -128,6 +128,15 @@ public class BankAccountTest {
         List<TransactionDTO> actualRecords = BankAccount.getTransactionOccured("1234567890",0L,100L);
         assertEquals(savedRecords,actualRecords);
     }
-
+    @Test
+    public void testGetNewestNtransactions(){
+        ArgumentCaptor<TransactionDTO> transactionRecords = ArgumentCaptor.forClass(TransactionDTO.class);
+        createListTransactions();
+        verify(transactionDao,times(2)).save(transactionRecords.capture());
+        List<TransactionDTO> savedRecords = transactionRecords.getAllValues();
+        when(transactionDao.get(accountNumber,2)).thenReturn(savedRecords);
+        List<TransactionDTO> actualRecords = BankAccount.getTransactionOccured("1234567890",2);
+        assertEquals(savedRecords,actualRecords);
+    }
 
 }

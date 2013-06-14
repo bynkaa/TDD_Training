@@ -31,7 +31,12 @@ public class Transaction {
     public static List<TransactionDTO> getTransactions(String accountNumber) {
         return transactionDao.get(accountNumber);
     }
+    //
     public static List<TransactionDTO> getTransactions(String accountNumber,long startTime,long stopTime) {
         return transactionDao.get(accountNumber,startTime,stopTime);
+    }
+    //
+    public static List<TransactionDTO> getTransactions(String accountNumber, int n) {
+        return transactionDao.get(accountNumber,n);
     }
 }

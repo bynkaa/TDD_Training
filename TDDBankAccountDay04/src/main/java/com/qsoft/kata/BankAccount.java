@@ -45,7 +45,12 @@ public class BankAccount {
     public static List<TransactionDTO> getTransactionOccured(String acountNumber) {
         return Transaction.getTransactions(acountNumber);
     }
+    //
     public static List<TransactionDTO> getTransactionOccured(String acountNumber,Long startTime,long stopTime) {
         return Transaction.getTransactions(acountNumber,startTime,stopTime);
+    }
+    //
+    public static List<TransactionDTO> getTransactionOccured(String acountNumber,int n) {
+        return Transaction.getTransactions(acountNumber,n);
     }
 }

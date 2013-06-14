@@ -23,4 +23,9 @@ public class TransactionDao {
         //To change body of created methods use File | Settings | File Templates.
         return null;
     }
+    //
+    public List<TransactionDTO> get(String accountNumber, int n) {
+        //To change body of created methods use File | Settings | File Templates.
+        return null;
+    }
 }
