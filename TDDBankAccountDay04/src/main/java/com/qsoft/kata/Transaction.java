@@ -1,6 +1,7 @@
 package com.qsoft.kata;
 
 import java.util.Calendar;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -27,8 +28,7 @@ public class Transaction {
         transactionDao.save(transactionDTO);
     }
 
-    public static void getTransactions(String accountNumber) {
-        transactionDao.get(accountNumber);
-
+    public static List<TransactionDTO> getTransactions(String accountNumber) {
+        return transactionDao.get(accountNumber);
     }
 }

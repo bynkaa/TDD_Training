@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.mockito.ArgumentCaptor;
 
 import java.util.Calendar;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
@@ -20,11 +21,16 @@ public class BankAccountTest {
     BankAccountDao bankAccountDao = mock(BankAccountDao.class);
     TransactionDao transactionDao = mock(TransactionDao.class);
     Calendar calendar = mock(Calendar.class);
+    String accountNumber = "1234567890";
     @Before
     public void setUp(){
+        reset(bankAccountDao);
+        reset(transactionDao);
+        reset(calendar);
         BankAccount.setBankAccountDao(bankAccountDao);
         Transaction.setTransactionDao(transactionDao);
         Transaction.setCalendar(calendar);
+
     }
     //
     @Test
@@ -38,14 +44,15 @@ public class BankAccountTest {
     //
     @Test
     public void testGetAccount(){
-        BankAccountDTO b = new BankAccountDTO("1234567890");
+        BankAccountDTO b = BankAccount.open(accountNumber);
         BankAccount.getAccount(b.getAccountNumber());
         verify(bankAccountDao, times(1)).get("1234567890");
     }
+
     //
     @Test
     public void testBankAccountDeposit(){
-        BankAccountDTO b = new BankAccountDTO("1234567890");
+        BankAccountDTO b = BankAccount.open(accountNumber);
         when(bankAccountDao.get("1234567890")).thenReturn(b);
         BankAccount.deposit("1234567890",50L,"first deposit");
         ArgumentCaptor<BankAccountDTO> argument = ArgumentCaptor.forClass(BankAccountDTO.class);
@@ -53,9 +60,10 @@ public class BankAccountTest {
         assertEquals("1234567890",argument.getValue().getAccountNumber());
         assertEquals(50L,argument.getValue().getBalance());
     }
+    //
     @Test
     public void testDepositTransactionShouldBeSaveToDB(){
-        BankAccountDTO b = new BankAccountDTO("1234567890");
+        BankAccountDTO b = BankAccount.open(accountNumber);
         when(bankAccountDao.get(b.getAccountNumber())).thenReturn(b);
         when(calendar.getTimeInMillis()).thenReturn(100L);
         BankAccount.deposit("1234567890",50L,"first deposit");
@@ -69,23 +77,23 @@ public class BankAccountTest {
 
     @Test
     public void testBankAccountWithDraw(){
-        BankAccountDTO b = new BankAccountDTO("1234567890");
+        BankAccountDTO b = BankAccount.open(accountNumber);
         when(bankAccountDao.get("1234567890")).thenReturn(b);
         BankAccount.withDraw("1234567890",50L,"first withdraw");
         ArgumentCaptor<BankAccountDTO> argument = ArgumentCaptor.forClass(BankAccountDTO.class);
-        verify(bankAccountDao,times(1)).save(argument.capture());
+        verify(bankAccountDao).save(argument.capture());
         assertEquals("1234567890",argument.getValue().getAccountNumber());
         assertEquals(-50L,argument.getValue().getBalance());
     }
 
     @Test
-    public void testBankAccountWithDrawTransactionShouldBeSaveToDB(){
-        BankAccountDTO b = new BankAccountDTO("1234567890");
+    public void testWithDrawTransactionShouldBeSaveToDB(){
+        BankAccountDTO b = BankAccount.open(accountNumber);
         when(bankAccountDao.get(b.getAccountNumber())).thenReturn(b);
         when(calendar.getTimeInMillis()).thenReturn(100L);
         BankAccount.withDraw("1234567890",50L,"first withdraw");
         ArgumentCaptor<TransactionDTO> argument = ArgumentCaptor.forClass(TransactionDTO.class);
-        verify(transactionDao,times(1)).save(argument.capture());
+        verify(transactionDao).save(argument.capture());
         assertEquals(b.getAccountNumber(),argument.getValue().getAccountNumber());
         assertEquals(-50L,argument.getValue().getAmount());
         assertEquals(100L,argument.getValue().getTimeStamp());
@@ -93,7 +101,16 @@ public class BankAccountTest {
 
     @Test
     public void testGetTransactionOccured(){
-        BankAccount.getTransactionOccured("1234567890");
+        BankAccountDTO bankAccountDTO = BankAccount.open(accountNumber);
+        when(bankAccountDao.get(accountNumber)).thenReturn(bankAccountDTO);
+        ArgumentCaptor<TransactionDTO> transactionRecords = ArgumentCaptor.forClass(TransactionDTO.class);
+        BankAccount.deposit(accountNumber,100L,"first deposit");
+        BankAccount.withDraw(accountNumber,50L,"first withdraw");
+        verify(transactionDao,times(2)).save(transactionRecords.capture());
+        List<TransactionDTO> savedRecords = transactionRecords.getAllValues();
+        when(transactionDao.get(accountNumber)).thenReturn(savedRecords);
+        List<TransactionDTO> actualRecords = BankAccount.getTransactionOccured("1234567890");
+        assertEquals(savedRecords,actualRecords);
     }
 
 }

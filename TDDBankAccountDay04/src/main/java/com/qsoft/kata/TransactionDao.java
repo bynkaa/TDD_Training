@@ -1,5 +1,7 @@
 package com.qsoft.kata;
 
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: BinkaA
@@ -12,7 +14,8 @@ public class TransactionDao {
         //To change body of created methods use File | Settings | File Templates.
     }
 
-    public void get(String accountNumber) {
+    public List<TransactionDTO> get(String accountNumber) {
         //To change body of created methods use File | Settings | File Templates.
+        return null;
     }
 }

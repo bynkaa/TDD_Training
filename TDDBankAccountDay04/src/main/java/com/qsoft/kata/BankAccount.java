@@ -1,5 +1,7 @@
 package com.qsoft.kata;
 
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: BinkaA
@@ -14,9 +16,10 @@ public class BankAccount {
         BankAccount.bankAccountDao = bankAccountDao;
     }
 
-    public static void open(String accountNumber) {
+    public static BankAccountDTO open(String accountNumber) {
         BankAccountDTO bankAccountDTO = new BankAccountDTO(accountNumber);
         bankAccountDao.create(bankAccountDTO);
+        return bankAccountDTO;
 
     }
 
@@ -36,11 +39,10 @@ public class BankAccount {
         BankAccountDTO b = bankAccountDao.get(accountNumber);
         b.setBalance(b.getBalance() + amount);
         bankAccountDao.save(b);
-        Transaction.save(accountNumber,amount,accountNumber);
+        Transaction.save(accountNumber,amount,description);
     }
 
-    public static void getTransactionOccured(String acountNumber) {
-        Transaction.getTransactions(acountNumber);
-
+    public static List<TransactionDTO> getTransactionOccured(String acountNumber) {
+        return Transaction.getTransactions(acountNumber);
     }
 }
