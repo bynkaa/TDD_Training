@@ -4,7 +4,7 @@
     <list default="true" id="8d71b8e7-4b97-49bf-b526-ab170e829a73" name="Default" comment="" />
     <ignored path="TDDBankAccountDay04.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/BankAccountTest.java" changelist="8d71b8e7-4b97-49bf-b526-ab170e829a73" time="1371231603220" ignored="false" />
+    <file path="/BankAccountTest.java" changelist="8d71b8e7-4b97-49bf-b526-ab170e829a73" time="1371232186973" ignored="false" />
     <file path="/fragment.java" changelist="8d71b8e7-4b97-49bf-b526-ab170e829a73" time="1371106722478" ignored="false" />
     <file path="/BankAccount.java" changelist="8d71b8e7-4b97-49bf-b526-ab170e829a73" time="1371231751053" ignored="false" />
     <file path="/BankAccountDao.java" changelist="8d71b8e7-4b97-49bf-b526-ab170e829a73" time="1371021704255" ignored="false" />
@@ -82,7 +82,7 @@
       <file leaf-file-name="BankAccountTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/kata/BankAccountTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="118" column="57" selection-start="5103" selection-end="5121" vertical-scroll-proportion="0.4750594">
+            <state line="130" column="4" selection-start="5608" selection-end="5608" vertical-scroll-proportion="0.7577197">
               <folding />
             </state>
           </provider>
@@ -158,10 +158,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/kata/BankAccountDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/kata/TransactionDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/kata/BankAccountDTO.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/qsoft/kata/BankAccountTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/kata/BankAccount.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/kata/Transaction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/kata/TransactionDao.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/qsoft/kata/BankAccountTest.java" />
       </list>
     </option>
   </component>
@@ -593,7 +593,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20444763" sideWeight="0.65090406" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34909597" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34909597" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -770,7 +770,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/kata/BankAccountTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="57" selection-start="5103" selection-end="5121" vertical-scroll-proportion="0.4750594">
+        <state line="130" column="4" selection-start="5608" selection-end="5608" vertical-scroll-proportion="0.7577197">
           <folding />
         </state>
       </provider>

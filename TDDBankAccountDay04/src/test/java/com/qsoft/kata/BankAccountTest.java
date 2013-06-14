@@ -98,14 +98,19 @@ public class BankAccountTest {
         assertEquals(-50L,argument.getValue().getAmount());
         assertEquals(100L,argument.getValue().getTimeStamp());
     }
+    public void createListTransactions(){
+        BankAccountDTO bankAccountDTO = BankAccount.open(accountNumber);
+        when(bankAccountDao.get(accountNumber)).thenReturn(bankAccountDTO);
+        when(calendar.getTimeInMillis()).thenReturn(0L).thenReturn(99L);
+        BankAccount.deposit(accountNumber,100L,"first deposit");
+        BankAccount.withDraw(accountNumber,50L,"first withdraw");
+    }
 
     @Test
     public void testGetTransactionOccured(){
-        BankAccountDTO bankAccountDTO = BankAccount.open(accountNumber);
-        when(bankAccountDao.get(accountNumber)).thenReturn(bankAccountDTO);
+
         ArgumentCaptor<TransactionDTO> transactionRecords = ArgumentCaptor.forClass(TransactionDTO.class);
-        BankAccount.deposit(accountNumber,100L,"first deposit");
-        BankAccount.withDraw(accountNumber,50L,"first withdraw");
+        createListTransactions();
         verify(transactionDao,times(2)).save(transactionRecords.capture());
         List<TransactionDTO> savedRecords = transactionRecords.getAllValues();
         when(transactionDao.get(accountNumber)).thenReturn(savedRecords);
@@ -114,16 +119,15 @@ public class BankAccountTest {
     }
     @Test
     public void testGetTransactionInAPeriod(){
-        BankAccountDTO bankAccountDTO = BankAccount.open(accountNumber);
-        when(bankAccountDao.get(accountNumber)).thenReturn(bankAccountDTO);
+
         ArgumentCaptor<TransactionDTO> transactionRecords = ArgumentCaptor.forClass(TransactionDTO.class);
-        BankAccount.deposit(accountNumber,100L,"first deposit");
-        BankAccount.withDraw(accountNumber,50L,"first withdraw");
+        createListTransactions();
         verify(transactionDao,times(2)).save(transactionRecords.capture());
         List<TransactionDTO> savedRecords = transactionRecords.getAllValues();
         when(transactionDao.get(accountNumber,0L,100L)).thenReturn(savedRecords);
         List<TransactionDTO> actualRecords = BankAccount.getTransactionOccured("1234567890",0L,100L);
         assertEquals(savedRecords,actualRecords);
     }
+
 
 }
