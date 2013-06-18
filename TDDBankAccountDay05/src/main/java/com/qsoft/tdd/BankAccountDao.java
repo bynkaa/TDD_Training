@@ -11,4 +11,9 @@ public class BankAccountDao {
     public void save(String accountNumber) {
 
     }
+
+    public BankAccountDTO get(String accountNumber) {
+        return null;
+
+    }
 }

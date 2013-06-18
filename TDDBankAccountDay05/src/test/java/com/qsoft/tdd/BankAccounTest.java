@@ -29,6 +29,11 @@ public class BankAccounTest {
         assertEquals("1234567890", b.getAccountNumber());
         assertEquals(0L,b.getBalance());
     }
+    @Test
+    public void testGetBankAccount(){
+        BankAccount.get(accountNumber);
+        verify(bankAccountDao,times(1)).get("1234567890");
+    }
 
 
 }
