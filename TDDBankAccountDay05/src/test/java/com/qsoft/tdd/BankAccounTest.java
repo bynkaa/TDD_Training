@@ -1,8 +1,10 @@
 package com.qsoft.tdd;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
 /**
@@ -22,8 +24,11 @@ public class BankAccounTest {
     }
     @Test
     public void testOpenNewBankAccount(){
-        BankAccount.open(accountNumber);
+        BankAccountDTO b = BankAccount.open(accountNumber);
         verify(bankAccountDao,times(1)).save("1234567890");
+        assertEquals("1234567890", b.getAccountNumber());
+        assertEquals(0L,b.getBalance());
     }
+
 
 }

@@ -8,8 +8,19 @@ package com.qsoft.tdd;
  * To change this template use File | Settings | File Templates.
  */
 public class BankAccountDTO {
+    private String accountNumber;
+    private long balance = 0;
+
     public BankAccountDTO(String accountNumber) {
+        this.accountNumber = accountNumber;
 
+    }
 
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public long getBalance() {
+        return balance;
     }
 }

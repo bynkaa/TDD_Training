@@ -20,4 +20,8 @@ public class BankAccount {
         return bankAccountDTO;
 
     }
+
+    public static void get(String accountNumber) {
+
+    }
 }
