@@ -16,12 +16,16 @@ public class BankAccount {
 
     public static BankAccountDTO open(String accountNumber) {
         BankAccountDTO bankAccountDTO = new BankAccountDTO(accountNumber);
-        bankAccountDao.save(accountNumber);
+        bankAccountDao.save(bankAccountDTO);
         return bankAccountDTO;
 
     }
 
     public static BankAccountDTO get(String accountNumber) {
         return bankAccountDao.get(accountNumber);
+    }
+
+    public static void deposit(String number, long l, String accountNumber) {
+        //To change body of created methods use File | Settings | File Templates.
     }
 }

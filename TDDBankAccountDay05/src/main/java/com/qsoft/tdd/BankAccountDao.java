@@ -8,7 +8,7 @@ package com.qsoft.tdd;
  * To change this template use File | Settings | File Templates.
  */
 public class BankAccountDao {
-    public void save(String accountNumber) {
+    public void save(BankAccountDTO bankAccountDTO) {
 
     }
 

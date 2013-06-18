@@ -3,6 +3,7 @@ package com.qsoft.tdd;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.ArgumentCaptor;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
@@ -25,7 +26,7 @@ public class BankAccounTest {
     @Test
     public void testOpenNewBankAccount(){
         BankAccountDTO b = BankAccount.open(accountNumber);
-        verify(bankAccountDao,times(1)).save("1234567890");
+        verify(bankAccountDao,times(1)).save(b);
         assertEquals("1234567890", b.getAccountNumber());
         assertEquals(0L,b.getBalance());
     }
@@ -33,6 +34,15 @@ public class BankAccounTest {
     public void testGetBankAccount(){
         BankAccount.get(accountNumber);
         verify(bankAccountDao,times(1)).get("1234567890");
+    }
+    @Test
+    public void testBankAccountDeposit(){
+        BankAccountDTO b = BankAccount.open(accountNumber);
+        BankAccount.deposit(accountNumber,50L,"deposit 50K");
+        ArgumentCaptor<BankAccountDTO> argument = ArgumentCaptor.forClass(BankAccountDTO.class);
+        verify(bankAccountDao,times(1)).save(argument.capture());
+        assertEquals("1234567890",argument.getValue().getAccountNumber());
+        assertEquals(50L,argument.getValue().getBalance());
     }
 
 
