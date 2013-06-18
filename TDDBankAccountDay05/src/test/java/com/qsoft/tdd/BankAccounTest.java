@@ -17,11 +17,14 @@ import static org.mockito.Mockito.*;
  */
 public class BankAccounTest {
     BankAccountDao bankAccountDao = mock(BankAccountDao.class);
+    TransactionDao transactionDao = mock(TransactionDao.class);
     public String accountNumber = "1234567890";
     @Before
     public void setUp(){
         reset(bankAccountDao);
+        reset(transactionDao);
         BankAccount.setBankAccountDao(bankAccountDao);
+        Transaction.setTransactionDao(transactionDao);
     }
     @Test
     public void testOpenNewBankAccount(){
@@ -44,6 +47,11 @@ public class BankAccounTest {
         verify(bankAccountDao,times(2)).save(argument.capture());
         assertEquals("1234567890",argument.getValue().getAccountNumber());
         assertEquals(50L,argument.getValue().getBalance());
+    }
+    @Test
+    public void testDepositTransactionShouldBeSavetoDB(){
+        TransactionDTO t = Transaction.createTransaction(accountNumber,50L,"deposit 50K");
+
     }
 
 
