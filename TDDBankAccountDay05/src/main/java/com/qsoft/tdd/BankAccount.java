@@ -25,7 +25,10 @@ public class BankAccount {
         return bankAccountDao.get(accountNumber);
     }
 
-    public static void deposit(String number, long l, String accountNumber) {
+    public static void deposit(String accountNumber, long amount, String description) {
         //To change body of created methods use File | Settings | File Templates.
+        BankAccountDTO b = bankAccountDao.get(accountNumber);
+        b.setBalance(b.getBalance() + amount);
+        bankAccountDao.save(b);
     }
 }
