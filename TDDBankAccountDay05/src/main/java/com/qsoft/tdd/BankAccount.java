@@ -27,17 +27,17 @@ public class BankAccount {
 
     public static void deposit(String accountNumber, long amount, String description) {
         //To change body of created methods use File | Settings | File Templates.
+        doTransaction(accountNumber,amount,description);
+    }
+
+    public static void withDraw(String accountNumber, long amount, String description) {
+        doTransaction(accountNumber,-amount,description);
+
+    }
+    private static void doTransaction(String accountNumber, long amount, String description){
         BankAccountDTO b = bankAccountDao.get(accountNumber);
         b.setBalance(b.getBalance() + amount);
         bankAccountDao.save(b);
         Transaction.save(accountNumber,amount,description);
-    }
-
-    public static void withDraw(String accountNumber, long amount, String description) {
-        BankAccountDTO b = bankAccountDao.get(accountNumber);
-        b.setBalance(b.getBalance() - amount);
-        bankAccountDao.save(b);
-        Transaction.save(accountNumber,-amount,description);
-
     }
 }
