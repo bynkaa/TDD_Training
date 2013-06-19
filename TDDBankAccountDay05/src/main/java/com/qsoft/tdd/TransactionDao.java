@@ -1,5 +1,7 @@
 package com.qsoft.tdd;
 
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: BinkaA
@@ -10,5 +12,9 @@ package com.qsoft.tdd;
 public class TransactionDao {
     public void save(TransactionDTO transactionDTO) {
         //To change body of created methods use File | Settings | File Templates.
+    }
+
+    public List<TransactionDTO> get(String accountNumber) {
+        return null;  //To change body of created methods use File | Settings | File Templates.
     }
 }

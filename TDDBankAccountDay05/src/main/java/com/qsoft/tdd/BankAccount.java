@@ -1,5 +1,7 @@
 package com.qsoft.tdd;
 
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: BinkaA
@@ -39,5 +41,9 @@ public class BankAccount {
         b.setBalance(b.getBalance() + amount);
         bankAccountDao.save(b);
         Transaction.save(accountNumber,amount,description);
+    }
+
+    public static List<TransactionDTO> getTransactions(String accountNumber) {
+        return Transaction.getTransactions(accountNumber);
     }
 }

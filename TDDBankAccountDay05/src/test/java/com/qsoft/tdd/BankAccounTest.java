@@ -85,6 +85,11 @@ public class BankAccounTest {
         TransactionDTO actual = argument.getValue();
         assertTrue(t.equals(actual));
     }
+    @Test
+    public void testGetTransactionOccurred(){
+        BankAccount.getTransactions(accountNumber);
+
+    }
 
 
 }

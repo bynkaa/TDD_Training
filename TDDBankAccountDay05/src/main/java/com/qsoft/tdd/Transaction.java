@@ -1,6 +1,7 @@
 package com.qsoft.tdd;
 
 import java.util.Calendar;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -27,7 +28,12 @@ public class Transaction {
     }
 
     public static void save(String accountNumber, long amount, String description) {
-        TransactionDTO t = createTransaction(accountNumber,amount,description);
+        TransactionDTO t = createTransaction(accountNumber, amount, description);
         transactionDao.save(t);
+    }
+
+    public static List<TransactionDTO> getTransactions(String accountNumber) {
+
+        return transactionDao.get(accountNumber);
     }
 }
