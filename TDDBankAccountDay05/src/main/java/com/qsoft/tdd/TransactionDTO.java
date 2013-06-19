@@ -12,10 +12,50 @@ public class TransactionDTO {
     private long timeStamp;
     private long amount;
     private String description;
+
     public TransactionDTO(String accountNumber, long timeStamp, long amount, String description) {
         this.accountNumber = accountNumber;
         this.timeStamp = timeStamp;
         this.amount = amount;
         this.description = description;
+    }
+
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public void setTimeStamp(long timeStamp) {
+        this.timeStamp = timeStamp;
+    }
+
+    public void setAmount(long amount) {
+        this.amount = amount;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public long getTimeStamp() {
+        return timeStamp;
+    }
+
+    public long getAmount() {
+        return amount;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public boolean equals(TransactionDTO t){
+        if (this == t)
+            return true;
+        return this.accountNumber.equals(t.getAccountNumber()) && this.timeStamp == t.getTimeStamp()
+                    && this.description.equals(t.getDescription()) && this.amount == t.amount;
     }
 }
