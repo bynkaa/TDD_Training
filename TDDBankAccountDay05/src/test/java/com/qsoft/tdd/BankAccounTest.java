@@ -74,6 +74,17 @@ public class BankAccounTest {
         assertEquals("1234567890",argument.getValue().getAccountNumber());
         assertEquals(-50L,argument.getValue().getBalance());
     }
+    @Test
+    public void testWithDrawTransactionShouldBeSaveToDB(){
+        BankAccountDTO b = BankAccount.open(accountNumber);
+        when(bankAccountDao.get("1234567890")).thenReturn(b);
+        TransactionDTO t = Transaction.createTransaction(accountNumber,-50L,"withdraw 50K");
+        BankAccount.withDraw(accountNumber,50L,"withdraw 50K");
+        ArgumentCaptor<TransactionDTO> argument = ArgumentCaptor.forClass(TransactionDTO.class);
+        verify(transactionDao,times(1)).save(argument.capture());
+        TransactionDTO actual = argument.getValue();
+        assertTrue(t.equals(actual));
+    }
 
 
 }
