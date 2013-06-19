@@ -32,4 +32,11 @@ public class BankAccount {
         bankAccountDao.save(b);
         Transaction.save(accountNumber,amount,description);
     }
+
+    public static void withDraw(String accountNumber, long amount, String description) {
+        BankAccountDTO b = bankAccountDao.get(accountNumber);
+        b.setBalance(b.getBalance() - amount);
+        bankAccountDao.save(b);
+
+    }
 }
