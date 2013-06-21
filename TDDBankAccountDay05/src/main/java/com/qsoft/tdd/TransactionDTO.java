@@ -52,10 +52,4 @@ public class TransactionDTO {
         return description;
     }
 
-    public boolean equals(TransactionDTO t){
-        if (this == t)
-            return true;
-        return this.accountNumber.equals(t.getAccountNumber()) && this.timeStamp == t.getTimeStamp()
-                    && this.description.equals(t.getDescription()) && this.amount == t.amount;
-    }
 }

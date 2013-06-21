@@ -17,19 +17,14 @@ public class Transaction {
         Transaction.transactionDao = transactionDao;
     }
 
-    public static TransactionDTO createTransaction(String accountNumber, long amount, String description) {
-        long timeStamp = calendar.getTimeInMillis();
-        TransactionDTO transactionDTO = new TransactionDTO(accountNumber,timeStamp,amount,description);
-        return transactionDTO;
-    }
-
     public static void setCalendar(Calendar calendar) {
         Transaction.calendar = calendar;
     }
 
     public static void save(String accountNumber, long amount, String description) {
-        TransactionDTO t = createTransaction(accountNumber, amount, description);
-        transactionDao.save(t);
+        long timeStamp = calendar.getTimeInMillis();
+        TransactionDTO transactionDTO = new TransactionDTO(accountNumber,timeStamp,amount,description);
+        transactionDao.save(transactionDTO);
     }
 
     public static List<TransactionDTO> getTransactions(String accountNumber) {

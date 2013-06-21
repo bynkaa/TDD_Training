@@ -57,12 +57,20 @@ public class BankAccounTest {
     public void testDepositTransactionShouldBeSavetoDB(){
         BankAccountDTO b = BankAccount.open(accountNumber);
         when(bankAccountDao.get("1234567890")).thenReturn(b);
-        TransactionDTO t = Transaction.createTransaction(accountNumber,50L,"deposit 50K");
+        when(calendar.getTimeInMillis()).thenReturn(100L);
         BankAccount.deposit(accountNumber,50L,"deposit 50K");
+        //
         ArgumentCaptor<TransactionDTO> argument = ArgumentCaptor.forClass(TransactionDTO.class);
+        //
         verify(transactionDao,times(1)).save(argument.capture());
         TransactionDTO actual = argument.getValue();
-        assertTrue(t.equals(actual));
+
+        assertEquals(actual.getAccountNumber(),accountNumber);
+        assertEquals(actual.getDescription(),"deposit 50K");
+        assertEquals(actual.getTimeStamp(),100L);
+        assertEquals(actual.getAmount(),50L);
+
+
     }
     @Test
     public void testWithDrawBehaviour(){
@@ -78,12 +86,17 @@ public class BankAccounTest {
     public void testWithDrawTransactionShouldBeSaveToDB(){
         BankAccountDTO b = BankAccount.open(accountNumber);
         when(bankAccountDao.get("1234567890")).thenReturn(b);
-        TransactionDTO t = Transaction.createTransaction(accountNumber,-50L,"withdraw 50K");
-        BankAccount.withDraw(accountNumber,50L,"withdraw 50K");
+        when(calendar.getTimeInMillis()).thenReturn(100L);
+        BankAccount.withDraw(accountNumber,50L,"deposit 50K");
+        //
         ArgumentCaptor<TransactionDTO> argument = ArgumentCaptor.forClass(TransactionDTO.class);
+        //
         verify(transactionDao,times(1)).save(argument.capture());
         TransactionDTO actual = argument.getValue();
-        assertTrue(t.equals(actual));
+        assertEquals(actual.getAccountNumber(),accountNumber);
+        assertEquals(actual.getDescription(),"deposit 50K");
+        assertEquals(actual.getTimeStamp(),100L);
+        assertEquals(actual.getAmount(),-50L);
     }
     @Test
     public void testGetTransactionOccurred(){
