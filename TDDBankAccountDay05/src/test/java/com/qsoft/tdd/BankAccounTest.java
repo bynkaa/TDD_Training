@@ -6,6 +6,7 @@ import org.junit.Test;
 import org.mockito.ArgumentCaptor;
 
 import java.util.Calendar;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -109,7 +110,12 @@ public class BankAccounTest {
         BankAccount.getTransactions(accountNumber,1000L,4000L);
         verify(transactionDao,times(1)).get(accountNumber,1000L,4000L);
     }
-
+    //
+    @Test
+    public void testGetTransactionOccurredInAPeriodThatStartTimeGreaterThanStoptime(){
+        List<TransactionDTO> actual = BankAccount.getTransactions(accountNumber,100L,50L);
+        assertEquals(null,actual);
+    }
 
 
 }
