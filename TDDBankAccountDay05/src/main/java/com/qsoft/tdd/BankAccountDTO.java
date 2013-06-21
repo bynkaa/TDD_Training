@@ -10,9 +10,11 @@ package com.qsoft.tdd;
 public class BankAccountDTO {
     private String accountNumber;
     private long balance = 0;
+    private long timeStamp = 0;
 
-    public BankAccountDTO(String accountNumber) {
+    public BankAccountDTO(String accountNumber, long timeStamp) {
         this.accountNumber = accountNumber;
+        this.timeStamp = timeStamp;
 
     }
 
@@ -26,5 +28,9 @@ public class BankAccountDTO {
 
     public void setBalance(long balance) {
         this.balance = balance;
+    }
+
+    public long getTimeStamp() {
+        return timeStamp;
     }
 }

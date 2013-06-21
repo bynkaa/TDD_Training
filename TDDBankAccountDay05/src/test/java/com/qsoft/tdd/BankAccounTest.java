@@ -1,6 +1,5 @@
 package com.qsoft.tdd;
 
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;
@@ -9,7 +8,6 @@ import java.util.Calendar;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.*;
 
 /**
@@ -29,15 +27,18 @@ public class BankAccounTest {
         reset(bankAccountDao);
         reset(transactionDao);
         BankAccount.setBankAccountDao(bankAccountDao);
+        BankAccount.setCalendar(calendar);
         Transaction.setTransactionDao(transactionDao);
         Transaction.setCalendar(calendar);
     }
     @Test
     public void testOpenNewBankAccount(){
+        when(calendar.getTimeInMillis()).thenReturn(100L);
         BankAccountDTO b = BankAccount.open(accountNumber);
         verify(bankAccountDao,times(1)).save(b);
         assertEquals("1234567890", b.getAccountNumber());
         assertEquals(0L,b.getBalance());
+        assertEquals(100L,b.getTimeStamp());
     }
     @Test
     public void testGetBankAccount(){
@@ -122,5 +123,6 @@ public class BankAccounTest {
         BankAccount.getTransactions(accountNumber,10);
         verify(transactionDao,times(1)).get(accountNumber,10);
     }
+
 
 }

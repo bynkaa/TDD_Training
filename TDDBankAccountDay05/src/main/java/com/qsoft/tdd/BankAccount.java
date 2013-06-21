@@ -1,5 +1,6 @@
 package com.qsoft.tdd;
 
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -11,13 +12,17 @@ import java.util.List;
  */
 public class BankAccount {
     private static BankAccountDao bankAccountDao;
-
+    private static Calendar calendar;
     public static void setBankAccountDao(BankAccountDao bankAccountDao) {
         BankAccount.bankAccountDao = bankAccountDao;
     }
+    public static void setCalendar(Calendar calendar){
+        BankAccount.calendar = calendar;
+    }
 
     public static BankAccountDTO open(String accountNumber) {
-        BankAccountDTO bankAccountDTO = new BankAccountDTO(accountNumber);
+        long timeStamp = calendar.getTimeInMillis();
+        BankAccountDTO bankAccountDTO = new BankAccountDTO(accountNumber,timeStamp);
         bankAccountDao.save(bankAccountDTO);
         return bankAccountDTO;
 
