@@ -116,6 +116,11 @@ public class BankAccounTest {
         List<TransactionDTO> actual = BankAccount.getTransactions(accountNumber,100L,50L);
         assertEquals(null,actual);
     }
-
+    //
+    @Test
+    public void testGetNTransactionOccurred(){
+        BankAccount.getTransactions(accountNumber,10);
+        verify(transactionDao,times(1)).get(accountNumber,10);
+    }
 
 }

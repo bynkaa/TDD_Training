@@ -52,4 +52,8 @@ public class BankAccount {
             return null;
         return Transaction.getTransactions(accountNumber,startTime,stopTime);
     }
+    //
+    public static List<TransactionDTO> getTransactions(String accountNumber,int n) {
+        return Transaction.getTransactions(accountNumber, n);
+    }
 }
