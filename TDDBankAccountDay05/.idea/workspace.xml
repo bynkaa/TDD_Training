@@ -13,6 +13,7 @@
     <file path="/Transaction.java" changelist="0f164de3-8942-4717-ac3b-715b1c6b1020" time="1371798476193" ignored="false" />
     <file path="/TransactionDTO.java" changelist="0f164de3-8942-4717-ac3b-715b1c6b1020" time="1371626027533" ignored="false" />
     <file path="/TransactionDao.java" changelist="0f164de3-8942-4717-ac3b-715b1c6b1020" time="1371798495294" ignored="false" />
+    <file path="/TransactionTest.java" changelist="0f164de3-8942-4717-ac3b-715b1c6b1020" time="1371799434687" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,10 +81,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BankAccounTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BankAccounTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/tdd/BankAccounTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="22" selection-start="418" selection-end="418" vertical-scroll-proportion="-3.150743">
+            <state line="48" column="38" selection-start="1520" selection-end="1520" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransactionTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/tdd/TransactionTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="29" selection-start="786" selection-end="786" vertical-scroll-proportion="-1.6822222">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -121,7 +133,7 @@
       <file leaf-file-name="BankAccount.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/tdd/BankAccount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="82" selection-start="777" selection-end="777" vertical-scroll-proportion="0.0">
+            <state line="23" column="0" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -165,6 +177,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/tdd/BankAccount.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/tdd/BankAccountDTO.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/qsoft/tdd/BankAccounTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/qsoft/tdd/TransactionTest.java" />
       </list>
     </option>
   </component>
@@ -317,34 +330,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.BankAccounTest">
-    <configuration default="false" name="BankAccounTest.testGetTransactionOccurredInASpecialPeriod" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.qsoft.tdd.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="TDDBankAccountDay05" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.qsoft.tdd" />
-      <option name="MAIN_CLASS_NAME" value="com.qsoft.tdd.BankAccounTest" />
-      <option name="METHOD_NAME" value="testGetTransactionOccurredInASpecialPeriod" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
     <configuration default="false" name="BankAccounTest.testGetTransactionOccurredInAPeriodThatStartTimeGreaterThanStoptime" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -457,6 +442,34 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="TransactionTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.qsoft.tdd.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="TDDBankAccountDay05" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.qsoft.tdd" />
+      <option name="MAIN_CLASS_NAME" value="com.qsoft.tdd.TransactionTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -549,19 +562,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.BankAccounTest.testGetTransactionOccurredInASpecialPeriod" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.BankAccounTest.testGetTransactionOccurredInAPeriodThatStartTimeGreaterThanStoptime" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.BankAccounTest.testGetNTransactionOccurred" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.BankAccounTest.testOpenNewBankAccount" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.BankAccounTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.BankAccounTest.testGetTransactionOccurredInAPeriodThatStartTimeGreaterThanStoptime" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.BankAccounTest.testGetNTransactionOccurred" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.BankAccounTest.testOpenNewBankAccount" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.BankAccounTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.TransactionTest" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.BankAccounTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.BankAccounTest.testOpenNewBankAccount" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.BankAccounTest.testGetNTransactionOccurred" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.BankAccounTest.testGetTransactionOccurredInAPeriodThatStartTimeGreaterThanStoptime" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.BankAccounTest.testGetTransactionOccurredInASpecialPeriod" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TransactionTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.BankAccounTest.testOpenNewBankAccount" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.BankAccounTest.testGetNTransactionOccurred" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.BankAccounTest.testGetTransactionOccurredInAPeriodThatStartTimeGreaterThanStoptime" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -617,8 +630,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33282673" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30876216" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33213773" sideWeight="0.6912378" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30876216" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -686,13 +699,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="779" selection-end="779" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/tdd/BankAccounTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="53" column="8" selection-start="1909" selection-end="1909" vertical-scroll-proportion="0.0">
@@ -767,15 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/tdd/BankAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="82" selection-start="777" selection-end="777" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/tdd/TransactionDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="63" selection-start="805" selection-end="805" vertical-scroll-proportion="0.0">
@@ -797,9 +794,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/tdd/BankAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/tdd/BankAccounTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="22" selection-start="418" selection-end="418" vertical-scroll-proportion="-3.150743">
+        <state line="48" column="38" selection-start="1520" selection-end="1520" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/tdd/TransactionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="29" selection-start="786" selection-end="786" vertical-scroll-proportion="-1.6822222">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
