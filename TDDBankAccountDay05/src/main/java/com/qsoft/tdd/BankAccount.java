@@ -46,4 +46,10 @@ public class BankAccount {
     public static List<TransactionDTO> getTransactions(String accountNumber) {
         return Transaction.getTransactions(accountNumber);
     }
+    //
+    public static List<TransactionDTO> getTransactions(String accountNumber,long startTime,long stopTime) {
+        if (startTime > stopTime)
+            return null;
+        return Transaction.getTransactions(accountNumber,startTime,stopTime);
+    }
 }

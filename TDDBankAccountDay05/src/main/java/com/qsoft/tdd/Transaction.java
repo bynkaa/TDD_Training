@@ -31,4 +31,9 @@ public class Transaction {
 
         return transactionDao.get(accountNumber);
     }
+    //
+    public static List<TransactionDTO> getTransactions(String accountNumber,long startTime, long stopTime) {
+
+        return transactionDao.get(accountNumber,startTime,stopTime);
+    }
 }

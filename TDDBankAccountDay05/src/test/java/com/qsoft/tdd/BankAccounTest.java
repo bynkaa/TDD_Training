@@ -104,6 +104,12 @@ public class BankAccounTest {
         verify(transactionDao,times(1)).get(accountNumber);
 
     }
+    @Test
+    public void testGetTransactionOccurredInASpecialPeriod(){
+        BankAccount.getTransactions(accountNumber,1000L,4000L);
+        verify(transactionDao,times(1)).get(accountNumber,1000L,4000L);
+    }
+
 
 
 }
