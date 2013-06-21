@@ -101,6 +101,7 @@ public class BankAccounTest {
     @Test
     public void testGetTransactionOccurred(){
         BankAccount.getTransactions(accountNumber);
+        verify(transactionDao,times(1)).get(accountNumber);
 
     }
 
