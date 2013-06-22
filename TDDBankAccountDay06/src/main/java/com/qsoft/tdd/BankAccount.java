@@ -1,5 +1,7 @@
 package com.qsoft.tdd;
 
+import javax.sql.rowset.spi.TransactionalWriter;
+
 /**
  * Created with IntelliJ IDEA.
  * User: BinkaA
@@ -26,10 +28,13 @@ public class BankAccount {
 
     }
 
-    public static void deposit(String accountNumber, long amount) {
+    public static void deposit(String accountNumber, long amount, String description) {
         BankAccountDTO bankAccountDTO = getAccount(accountNumber);
         bankAccountDTO.setBalance(bankAccountDTO.getBalance() + amount);
         bankAccountDao.save(bankAccountDTO);
+        //
+        Transaction.save(accountNumber,amount,description);
+
 
     }
 }

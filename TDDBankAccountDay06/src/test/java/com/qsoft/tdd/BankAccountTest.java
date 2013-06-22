@@ -39,10 +39,15 @@ public class BankAccountTest {
     public void testDepositShouldIncreaseBalance(){
         BankAccountDTO b = BankAccount.openAccount(accountNumber);
         when(bankAccountDao.get("1234567890")).thenReturn(b);
-        BankAccount.deposit(accountNumber,50L);
+        BankAccount.deposit(accountNumber,50L,"deposit 50K");
         ArgumentCaptor<BankAccountDTO> argument = ArgumentCaptor.forClass(BankAccountDTO.class);
         verify(bankAccountDao,times(2)).save(argument.capture());
         assertEquals(accountNumber,argument.getValue().getAccountNumber());
         assertEquals(50L,argument.getValue().getBalance());
+    }
+    @Test
+    public void testDepositShouldSaveTransactionToDB(){
+        BankAccount.deposit(accountNumber,50L,"deposit 50K");
+
     }
 }
