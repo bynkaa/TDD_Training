@@ -35,4 +35,14 @@ public class BankAccountTest {
         BankAccount.getAccount(accountNumber);
         verify(bankAccountDao,times(1)).get(accountNumber);
     }
+    @Test
+    public void testDepositShouldIncreaseBalance(){
+        BankAccountDTO b = BankAccount.openAccount(accountNumber);
+        when(bankAccountDao.get("1234567890")).thenReturn(b);
+        BankAccount.deposit(accountNumber,50L);
+        ArgumentCaptor<BankAccountDTO> argument = ArgumentCaptor.forClass(BankAccountDTO.class);
+        verify(bankAccountDao,times(2)).save(argument.capture());
+        assertEquals(accountNumber,argument.getValue().getAccountNumber());
+        assertEquals(50L,argument.getValue().getBalance());
+    }
 }
