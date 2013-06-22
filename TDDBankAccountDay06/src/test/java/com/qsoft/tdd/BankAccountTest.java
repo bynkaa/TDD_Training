@@ -32,6 +32,7 @@ public class BankAccountTest {
     }
     @Test
     public void testGetNewAccount(){
-
+        BankAccount.getAccount(accountNumber);
+        verify(bankAccountDao,times(1)).get(accountNumber);
     }
 }

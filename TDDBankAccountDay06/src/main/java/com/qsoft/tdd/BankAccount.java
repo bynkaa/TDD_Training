@@ -20,4 +20,9 @@ public class BankAccount {
         bankAccountDao.save(bankAccountDTO);
         return bankAccountDTO;
     }
+
+    public static BankAccountDTO getAccount(String accountNumber) {
+        return bankAccountDao.get(accountNumber);
+
+    }
 }

@@ -4,12 +4,12 @@
     <list default="true" id="e18838f4-22f9-4c11-ad33-c1ac097e3ea4" name="Default" comment="" />
     <ignored path="TDDBankAccountDay06.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/BankAccountTest.java" changelist="e18838f4-22f9-4c11-ad33-c1ac097e3ea4" time="1371884416277" ignored="false" />
+    <file path="/BankAccountTest.java" changelist="e18838f4-22f9-4c11-ad33-c1ac097e3ea4" time="1371884584526" ignored="false" />
     <file path="/fragment.java" changelist="e18838f4-22f9-4c11-ad33-c1ac097e3ea4" time="1371883951506" ignored="false" />
     <file path="/pom.xml" changelist="e18838f4-22f9-4c11-ad33-c1ac097e3ea4" time="1371883444814" ignored="false" />
-    <file path="/BankAccount.java" changelist="e18838f4-22f9-4c11-ad33-c1ac097e3ea4" time="1371884060104" ignored="false" />
+    <file path="/BankAccount.java" changelist="e18838f4-22f9-4c11-ad33-c1ac097e3ea4" time="1371884548781" ignored="false" />
     <file path="/BankAccountDTO.java" changelist="e18838f4-22f9-4c11-ad33-c1ac097e3ea4" time="1371884018917" ignored="false" />
-    <file path="/BankAccountDao.java" changelist="e18838f4-22f9-4c11-ad33-c1ac097e3ea4" time="1371884042031" ignored="false" />
+    <file path="/BankAccountDao.java" changelist="e18838f4-22f9-4c11-ad33-c1ac097e3ea4" time="1371884553230" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +80,7 @@
       <file leaf-file-name="BankAccountTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/tdd/BankAccountTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="8" selection-start="1057" selection-end="1057" vertical-scroll-proportion="0.8135965">
+            <state line="34" column="58" selection-start="1103" selection-end="1103" vertical-scroll-proportion="0.8135965">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,7 +91,7 @@
       <file leaf-file-name="BankAccount.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/tdd/BankAccount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="32" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0">
+            <state line="24" column="32" selection-start="799" selection-end="799" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -109,7 +109,7 @@
       <file leaf-file-name="BankAccountDao.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/tdd/BankAccountDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="8" selection-start="270" selection-end="343" vertical-scroll-proportion="0.0">
+            <state line="15" column="8" selection-start="413" selection-end="500" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -127,9 +127,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/test/java/com/qsoft/tdd/BankAccountDao.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qsoft/tdd/BankAccountDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qsoft/tdd/BankAccount.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/tdd/BankAccountDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qsoft/tdd/BankAccount.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qsoft/tdd/BankAccountDao.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/qsoft/tdd/BankAccountTest.java" />
       </list>
     </option>
@@ -282,7 +282,7 @@
       <recent name="com.qsoft.tdd" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BankAccountTest.testOpenNewAccount">
+  <component name="RunManager" selected="JUnit.BankAccountTest.testGetNewAccount">
     <configuration default="false" name="BankAccountTest.testOpenNewAccount" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -296,6 +296,34 @@
       <option name="PACKAGE_NAME" value="com.qsoft.tdd" />
       <option name="MAIN_CLASS_NAME" value="com.qsoft.tdd.BankAccountTest" />
       <option name="METHOD_NAME" value="testOpenNewAccount" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="BankAccountTest.testGetNewAccount" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.qsoft.tdd.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="TDDBankAccountDay06" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.qsoft.tdd" />
+      <option name="MAIN_CLASS_NAME" value="com.qsoft.tdd.BankAccountTest" />
+      <option name="METHOD_NAME" value="testGetNewAccount" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -402,12 +430,14 @@
       <patterns />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testOpenNewAccount" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testGetNewAccount" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testOpenNewAccount" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testGetNewAccount" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testOpenNewAccount" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -446,7 +476,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964131" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32962447" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32962447" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -514,23 +544,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/tdd/BankAccountDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="8" selection-start="270" selection-end="343" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="8" selection-start="781" selection-end="781" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/tdd/BankAccount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="32" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0">
+        <state line="24" column="32" selection-start="799" selection-end="799" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -542,9 +558,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/tdd/BankAccountDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="8" selection-start="413" selection-end="500" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="8" selection-start="781" selection-end="781" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/tdd/BankAccountTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="8" selection-start="1057" selection-end="1057" vertical-scroll-proportion="0.8135965">
+        <state line="34" column="58" selection-start="1103" selection-end="1103" vertical-scroll-proportion="0.8135965">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
