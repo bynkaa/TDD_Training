@@ -46,4 +46,9 @@ public class BankAccount {
         Transaction.save(accountNumber,-amount,description);
 
     }
+
+    public static void getTransaction(String accountNumber) {
+        Transaction.get(accountNumber);
+
+    }
 }

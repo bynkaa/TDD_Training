@@ -87,4 +87,10 @@ public class BankAccountTest {
         assertEquals(100L,argument.getValue().getTimeStamp());
 
     }
+    @Test
+    public void testGetTransactionOccurred(){
+        BankAccount.getTransaction(accountNumber);
+        verify(transactionDao,times(1)).get("1234567890");
+
+    }
 }
