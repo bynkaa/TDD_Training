@@ -37,4 +37,13 @@ public class BankAccount {
 
 
     }
+
+    public static void withdraw(String accountNumber, long amount, String description) {
+        BankAccountDTO bankAccountDTO = getAccount(accountNumber);
+        bankAccountDTO.setBalance(bankAccountDTO.getBalance() - amount);
+        bankAccountDao.save(bankAccountDTO);
+        //
+        Transaction.save(accountNumber,amount,description);
+
+    }
 }

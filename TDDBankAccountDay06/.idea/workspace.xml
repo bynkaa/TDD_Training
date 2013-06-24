@@ -4,10 +4,10 @@
     <list default="true" id="e18838f4-22f9-4c11-ad33-c1ac097e3ea4" name="Default" comment="" />
     <ignored path="TDDBankAccountDay06.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/BankAccountTest.java" changelist="e18838f4-22f9-4c11-ad33-c1ac097e3ea4" time="1372056129071" ignored="false" />
+    <file path="/BankAccountTest.java" changelist="e18838f4-22f9-4c11-ad33-c1ac097e3ea4" time="1372056239693" ignored="false" />
     <file path="/fragment.java" changelist="e18838f4-22f9-4c11-ad33-c1ac097e3ea4" time="1371885432725" ignored="false" />
     <file path="/pom.xml" changelist="e18838f4-22f9-4c11-ad33-c1ac097e3ea4" time="1371883444814" ignored="false" />
-    <file path="/BankAccount.java" changelist="e18838f4-22f9-4c11-ad33-c1ac097e3ea4" time="1371885195960" ignored="false" />
+    <file path="/BankAccount.java" changelist="e18838f4-22f9-4c11-ad33-c1ac097e3ea4" time="1372056251403" ignored="false" />
     <file path="/BankAccountDTO.java" changelist="e18838f4-22f9-4c11-ad33-c1ac097e3ea4" time="1371884018917" ignored="false" />
     <file path="/BankAccountDao.java" changelist="e18838f4-22f9-4c11-ad33-c1ac097e3ea4" time="1371884553230" ignored="false" />
     <file path="/Transaction.java" changelist="e18838f4-22f9-4c11-ad33-c1ac097e3ea4" time="1371885447973" ignored="false" />
@@ -83,7 +83,7 @@
       <file leaf-file-name="BankAccountTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/tdd/BankAccountTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="62" selection-start="2639" selection-end="2639" vertical-scroll-proportion="0.79183674">
+            <state line="74" column="22" selection-start="3163" selection-end="3163" vertical-scroll-proportion="0.8612245">
               <folding />
             </state>
           </provider>
@@ -92,7 +92,7 @@
       <file leaf-file-name="BankAccount.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/tdd/BankAccount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="22" selection-start="1181" selection-end="1181" vertical-scroll-proportion="0.0">
+            <state line="45" column="26" selection-start="1539" selection-end="1539" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -157,10 +157,10 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/tdd/BankAccountDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/tdd/BankAccountDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qsoft/tdd/BankAccount.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/tdd/TransactionDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/tdd/Transaction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/tdd/TransactionDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qsoft/tdd/BankAccount.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/qsoft/tdd/BankAccountTest.java" />
       </list>
     </option>
@@ -313,7 +313,7 @@
       <recent name="com.qsoft.tdd" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BankAccountTest.testDepositShouldSaveTransactionToDB">
+  <component name="RunManager" selected="JUnit.BankAccountTest.testWithdrawShouldDecreaseBalance">
     <configuration default="false" name="BankAccountTest.testOpenNewAccount" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -426,6 +426,34 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="BankAccountTest.testWithdrawShouldDecreaseBalance" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.qsoft.tdd.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="TDDBankAccountDay06" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.qsoft.tdd" />
+      <option name="MAIN_CLASS_NAME" value="com.qsoft.tdd.BankAccountTest" />
+      <option name="METHOD_NAME" value="testWithdrawShouldDecreaseBalance" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -517,18 +545,20 @@
       <patterns />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testOpenNewAccount" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testGetNewAccount" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testDepositShouldIncreaseBalance" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testDepositShouldSaveTransactionToDB" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testWithdrawShouldDecreaseBalance" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testDepositShouldSaveTransactionToDB" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testDepositShouldIncreaseBalance" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testGetNewAccount" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testOpenNewAccount" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testWithdrawShouldDecreaseBalance" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testDepositShouldSaveTransactionToDB" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testDepositShouldIncreaseBalance" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testGetNewAccount" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.BankAccountTest.testOpenNewAccount" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -728,7 +758,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/tdd/BankAccount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="22" selection-start="1181" selection-end="1181" vertical-scroll-proportion="0.0">
+        <state line="45" column="26" selection-start="1539" selection-end="1539" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -742,7 +772,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/tdd/BankAccountTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="62" selection-start="2639" selection-end="2639" vertical-scroll-proportion="0.79183674">
+        <state line="74" column="22" selection-start="3163" selection-end="3163" vertical-scroll-proportion="0.8612245">
           <folding />
         </state>
       </provider>

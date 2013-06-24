@@ -64,4 +64,14 @@ public class BankAccountTest {
         assertEquals(100L,argument.getValue().getTimeStamp());
 
     }
+    @Test
+    public void testWithdrawShouldDecreaseBalance(){
+        BankAccountDTO b = BankAccount.openAccount(accountNumber);
+        when(bankAccountDao.get("1234567890")).thenReturn(b);
+        BankAccount.withdraw(accountNumber,50L,"deposit 50K");
+        ArgumentCaptor<BankAccountDTO> argument = ArgumentCaptor.forClass(BankAccountDTO.class);
+        verify(bankAccountDao,times(2)).save(argument.capture());
+        assertEquals(accountNumber,argument.getValue().getAccountNumber());
+        assertEquals(-50L,argument.getValue().getBalance());
+    }
 }
