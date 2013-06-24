@@ -1,6 +1,7 @@
 package com.qsoft.tdd;
 
 import javax.sql.rowset.spi.TransactionalWriter;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -47,8 +48,12 @@ public class BankAccount {
 
     }
 
-    public static void getTransaction(String accountNumber) {
-        Transaction.get(accountNumber);
+    public static List<TransactionDTO> getTransaction(String accountNumber) {
+        return Transaction.get(accountNumber);
 
+    }
+
+    public static List<TransactionDTO> getTransaction(String accountNumber, int number) {
+        return Transaction.get(accountNumber,number);
     }
 }

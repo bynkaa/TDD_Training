@@ -93,4 +93,9 @@ public class BankAccountTest {
         verify(transactionDao,times(1)).get("1234567890");
 
     }
+    @Test
+    public void testGetNTransactionOccurred(){
+        BankAccount.getTransaction(accountNumber,2);
+        verify(transactionDao,times(1)).get("1234567890",2);
+    }
 }

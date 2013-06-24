@@ -19,4 +19,8 @@ public class TransactionDao {
         return null;
 
     }
+
+    public List<TransactionDTO> get(String accountNumber, int number) {
+        return null;  //To change body of created methods use File | Settings | File Templates.
+    }
 }

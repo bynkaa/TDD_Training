@@ -32,4 +32,9 @@ public class Transaction {
         return transactionDao.get(accountNumber);
 
     }
+
+    public static List<TransactionDTO> get(String accountNumber, int number) {
+        return transactionDao.get(accountNumber,number);
+
+    }
 }
