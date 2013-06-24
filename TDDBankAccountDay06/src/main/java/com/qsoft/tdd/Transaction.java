@@ -18,4 +18,12 @@ public class Transaction {
         transactionDao.save(transactionDTO);
 
     }
+
+    public static void setTransactionDao(TransactionDao transactionDao) {
+        Transaction.transactionDao = transactionDao;
+    }
+
+    public static void setCalendar(Calendar calendar) {
+        Transaction.calendar = calendar;
+    }
 }
