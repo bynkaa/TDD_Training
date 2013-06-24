@@ -43,7 +43,7 @@ public class BankAccount {
         bankAccountDTO.setBalance(bankAccountDTO.getBalance() - amount);
         bankAccountDao.save(bankAccountDTO);
         //
-        Transaction.save(accountNumber,amount,description);
+        Transaction.save(accountNumber,-amount,description);
 
     }
 }
