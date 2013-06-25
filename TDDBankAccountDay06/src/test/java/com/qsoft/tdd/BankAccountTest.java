@@ -55,19 +55,6 @@ public class BankAccountTest {
         assertEquals(50L,argument.getValue().getBalance());
     }
     @Test
-    public void testDepositShouldSaveTransactionToDB(){
-        BankAccountDTO b = BankAccount.openAccount(accountNumber);
-        when(bankAccountDao.get("1234567890")).thenReturn(b);
-        when(calendar.getTimeInMillis()).thenReturn(100L);
-        BankAccount.deposit(accountNumber,50L,"deposit 50K");
-        ArgumentCaptor<TransactionDTO> argument = ArgumentCaptor.forClass(TransactionDTO.class);
-        verify(transactionDao,times(1)).save(argument.capture());
-        assertEquals("1234567890",argument.getValue().getAccountNumber());
-        assertEquals(50L,argument.getValue().getAmount());
-        assertEquals(100L,argument.getValue().getTimeStamp());
-
-    }
-    @Test
     public void testWithdrawShouldDecreaseBalance(){
         BankAccountDTO b = BankAccount.openAccount(accountNumber);
         when(bankAccountDao.get("1234567890")).thenReturn(b);
@@ -77,34 +64,5 @@ public class BankAccountTest {
         assertEquals(accountNumber,argument.getValue().getAccountNumber());
         assertEquals(-50L,argument.getValue().getBalance());
     }
-    @Test
-    public void testWithdrawShouldSaveTransactionToDB(){
-        BankAccountDTO b = BankAccount.openAccount(accountNumber);
-        when(bankAccountDao.get("1234567890")).thenReturn(b);
-        when(calendar.getTimeInMillis()).thenReturn(100L);
-        BankAccount.withdraw(accountNumber,50L,"deposit 50K");
-        ArgumentCaptor<TransactionDTO> argument = ArgumentCaptor.forClass(TransactionDTO.class);
-        verify(transactionDao,times(1)).save(argument.capture());
-        assertEquals("1234567890",argument.getValue().getAccountNumber());
-        assertEquals(-50L,argument.getValue().getAmount());
-        assertEquals(100L,argument.getValue().getTimeStamp());
 
-    }
-    @Test
-    public void testGetTransactionOccurred(){
-        BankAccount.getTransaction(accountNumber);
-        verify(transactionDao,times(1)).get("1234567890");
-
-    }
-    @Test
-    public void testGetNTransactionOccurred(){
-        BankAccount.getTransaction(accountNumber,2);
-        verify(transactionDao,times(1)).get("1234567890",2);
-    }
-
-    @Test
-    public void testGetTransactionOccurredInAPeriod(){
-        BankAccount.getTransaction(accountNumber,50L,100L);
-        verify(transactionDao,times(1)).get("1234567890",50L,100L);
-    }
 }
