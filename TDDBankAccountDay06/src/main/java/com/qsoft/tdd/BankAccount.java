@@ -1,6 +1,7 @@
 package com.qsoft.tdd;
 
 import javax.sql.rowset.spi.TransactionalWriter;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -12,14 +13,17 @@ import java.util.List;
  */
 public class BankAccount {
     private static BankAccountDao bankAccountDao;
+    private static Calendar calendar;
 
     public static void setBankAccountDao(BankAccountDao bankAccountDao) {
         BankAccount.bankAccountDao = bankAccountDao;
     }
 
+
     public static BankAccountDTO openAccount(String accountNumber) {
         //To change body of created methods use File | Settings | File Templates.
-        BankAccountDTO bankAccountDTO = new BankAccountDTO(accountNumber);
+        long timeStamp = calendar.getTimeInMillis();
+        BankAccountDTO bankAccountDTO = new BankAccountDTO(accountNumber,timeStamp);
         bankAccountDao.save(bankAccountDTO);
         return bankAccountDTO;
     }
@@ -63,5 +67,9 @@ public class BankAccount {
         else
             return Transaction.get(accountNumber,startTime,stopTime);
 
+    }
+
+    public static void setCalendar(Calendar calendar) {
+        BankAccount.calendar = calendar;
     }
 }

@@ -25,16 +25,19 @@ public class BankAccountTest {
     public void setUp(){
         reset(bankAccountDao);
         BankAccount.setBankAccountDao(bankAccountDao);
+        BankAccount.setCalendar(calendar);
         Transaction.setTransactionDao(transactionDao);
         Transaction.setCalendar(calendar);
     }
     @Test
     public void testOpenNewAccount(){
+        when(calendar.getTimeInMillis()).thenReturn(100L);
         BankAccount.openAccount(accountNumber);
         ArgumentCaptor<BankAccountDTO>  argument = ArgumentCaptor.forClass(BankAccountDTO.class);
         verify(bankAccountDao,times(1)).save(argument.capture());
         assertEquals(accountNumber,argument.getValue().getAccountNumber());
         assertEquals(0,argument.getValue().getBalance());
+        assertEquals(100L,argument.getValue().getOpenTimeStamp());
     }
     @Test
     public void testGetNewAccount(){

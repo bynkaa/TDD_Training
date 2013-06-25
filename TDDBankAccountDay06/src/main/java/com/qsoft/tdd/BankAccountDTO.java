@@ -12,8 +12,9 @@ public class BankAccountDTO {
     private long balance = 0;
     private long openTimeStamp;
 
-    public BankAccountDTO(String accountNumber) {
+    public BankAccountDTO(String accountNumber, long timeStamp) {
         this.accountNumber = accountNumber;
+        openTimeStamp = timeStamp;
     }
 
     public String getAccountNumber() {
