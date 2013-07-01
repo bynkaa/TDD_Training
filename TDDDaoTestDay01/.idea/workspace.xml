@@ -4,6 +4,20 @@
     <list default="true" id="525e7c9a-01f7-40f2-b069-70336559c7d2" name="Default" comment="" />
     <ignored path="TDDDaoTestDay01.iws" />
     <ignored path=".idea/workspace.xml" />
+    <file path="$PROJECT_DIR$/../../../Google Drive/codes/spring_eclipselink/src/main/resources/META-INF/persistence.xml" changelist="525e7c9a-01f7-40f2-b069-70336559c7d2" time="1372436384279" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Google Drive/codes/spring_eclipselink/src/main/resources/spring-config.xml" changelist="525e7c9a-01f7-40f2-b069-70336559c7d2" time="1372436019596" ignored="false" />
+    <file path="/spring-config.xml" changelist="525e7c9a-01f7-40f2-b069-70336559c7d2" time="1372435917940" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Google Drive/codes/spring_eclipselink/src/main/java/com/qsoft/dao/PeopleDaoImpl.java" changelist="525e7c9a-01f7-40f2-b069-70336559c7d2" time="1372435480154" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Google Drive/codes/spring_eclipselink/pom.xml" changelist="525e7c9a-01f7-40f2-b069-70336559c7d2" time="1372436793805" ignored="false" />
+    <file path="/pom.xml" changelist="525e7c9a-01f7-40f2-b069-70336559c7d2" time="1372660300546" ignored="false" />
+    <file path="/fragment.java" changelist="525e7c9a-01f7-40f2-b069-70336559c7d2" time="1372436247082" ignored="false" />
+    <file path="/Dummy.txt" changelist="525e7c9a-01f7-40f2-b069-70336559c7d2" time="1372660180605" ignored="false" />
+    <file path="dbtable:/5467c776/e2b1d8f2-e225-4ced-9caa-c533555e5571/sampledb.public.people" changelist="525e7c9a-01f7-40f2-b069-70336559c7d2" time="1372435427810" ignored="false" />
+    <file path="/persistence.xml" changelist="525e7c9a-01f7-40f2-b069-70336559c7d2" time="1372435872425" ignored="false" />
+    <file path="/schema.xml" changelist="525e7c9a-01f7-40f2-b069-70336559c7d2" time="1372581298669" ignored="false" />
+    <file path="/dataset.xml" changelist="525e7c9a-01f7-40f2-b069-70336559c7d2" time="1372581258003" ignored="false" />
+    <file path="/schema.sql" changelist="525e7c9a-01f7-40f2-b069-70336559c7d2" time="1372581404776" ignored="false" />
+    <file path="/BankAccountDaoTest.java" changelist="525e7c9a-01f7-40f2-b069-70336559c7d2" time="1372660936818" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,28 +78,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="4" selection-start="795" selection-end="795" vertical-scroll-proportion="0.5887446">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TransactionDaoTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/tdd/DaoTest/TransactionDaoTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="31" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BankAccountDaoTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/tdd/DaoTest/BankAccountDaoTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="31" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0">
+            <state line="29" column="20" selection-start="1009" selection-end="1009" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -109,6 +105,62 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="BankAccountDaoTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/tdd/DaoTest/BankAccountDaoTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="4" selection-start="987" selection-end="987" vertical-scroll-proportion="0.7358209">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dataset.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/dataset.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="10" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="schema.sql" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/schema.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="52" selection-start="106" selection-end="106" vertical-scroll-proportion="-1.36">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BankAccount.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/tdd/BankAccount.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="13" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BankAccountDTO.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/tdd/BankAccountDTO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="13" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransactionDaoTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/tdd/DaoTest/TransactionDaoTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="31" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -116,12 +168,24 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/tdd/Transaction.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/qsoft/tdd/ServiceTest/BankAccountTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/dataset.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/schema.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/schema.sql" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/qsoft/tdd/DaoTest/BankAccountDaoTest.java" />
       </list>
     </option>
   </component>
@@ -131,7 +195,7 @@
     <option name="width" value="1456" />
     <option name="height" value="876" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -159,7 +223,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -256,6 +319,10 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -285,19 +352,25 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="vcs.Git" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../code/DBUnitSample-master" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -439,6 +512,23 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="525e7c9a-01f7-40f2-b069-70336559c7d2" name="Default" comment="" />
@@ -449,7 +539,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -468,13 +558,13 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964131" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1886657" sideWeight="0.9651325" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -543,6 +633,13 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/tdd/Transaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="8" selection-start="421" selection-end="421" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -567,7 +664,9 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/tdd/DaoTest/BankAccountDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="31" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -592,13 +691,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/tdd/DaoTest/BankAccountDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="31" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/tdd/DaoTest/TransactionDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="31" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0">
@@ -613,10 +705,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/tdd/BankAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/tdd/BankAccountDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="13" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/dataset.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="10" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/schema.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="52" selection-start="106" selection-end="106" vertical-scroll-proportion="-1.36">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="4" selection-start="795" selection-end="795" vertical-scroll-proportion="0.5887446">
+        <state line="29" column="20" selection-start="1009" selection-end="1009" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/qsoft/tdd/DaoTest/BankAccountDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="4" selection-start="987" selection-end="987" vertical-scroll-proportion="0.7358209">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
