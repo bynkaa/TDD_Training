@@ -1,9 +1,6 @@
 package com.qsoft.tdd.persistence.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * User: BinkaA
@@ -12,15 +9,17 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "bank_account")
+@SequenceGenerator(name = "account_id_seq", sequenceName = "account_id_seq")
 public class BankAccountDTO {
     @Id
-    @Column("account_id")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "account_id_seq")
+    @Column(name = "account_id")
     private long bankAccountId;
-    @Column("account_number")
+    @Column(name = "account_number")
     private String accountNumber;
-    @Column("balance")
+    @Column(name = "balance")
     private long balance = 0;
-    @Column("openTimeStamp")
+    @Column(name = "open_timestamp")
     private long openTimeStamp;
 
     public long getBankAccountId() {
