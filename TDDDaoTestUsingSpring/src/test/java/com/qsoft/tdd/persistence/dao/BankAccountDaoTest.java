@@ -46,6 +46,7 @@ public class BankAccountDaoTest {
     private IDatabaseTester databaseTester;
     @Autowired
     private BankAccountDAO bankAccountDAO;
+    private String accountNumber = "1234567890";
     @Before
     public void setup() throws Exception {
         IDataSet dataSet = readDataset();
@@ -64,7 +65,12 @@ public class BankAccountDaoTest {
     }
     @Test
     public void testGetAccountNotExistInDB(){
-        BankAccountDTO bankAccountDTO = bankAccountDAO.get("1234567890");
+        BankAccountDTO bankAccountDTO = bankAccountDAO.get("1234567899");
+        assertEquals(bankAccountDTO,null);
+    }
+    @Test
+    public void testGetAccountWithIllegalFormatAccountNumber(){
+        BankAccountDTO bankAccountDTO = bankAccountDAO.get("1234babvdjah");
         assertEquals(bankAccountDTO,null);
     }
 
@@ -76,11 +82,15 @@ public class BankAccountDaoTest {
         BankAccountDTO savedBankAccount = bankAccountDAO.get("1234567890");
         assertEquals(bankAccountDTO,savedBankAccount);
     }
-
     @Test
-    public void testUpdateExistedBankAccount(){
-
+    public void testGetBankAccount(){
+        BankAccountDTO bankAccountDTO = bankAccountDAO.get(accountNumber);
+        assertEquals(accountNumber,bankAccountDTO.getAccountNumber());
+        assertEquals(100,bankAccountDTO.getBalance());
+        assertEquals(100,bankAccountDTO.getOpenTimeStamp());
     }
+
+
 
     private IDataSet readDataset() throws DataSetException {
         return new FlatXmlDataSetBuilder().build(System.class.getResource("/dataset.xml"));

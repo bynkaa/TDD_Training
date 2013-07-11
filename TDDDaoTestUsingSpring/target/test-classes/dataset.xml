@@ -1,4 +1,4 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dataset>
-    <bank_account account_id="1" account_number="bynkaa" balance="100" open_timestamp = "100"/>
+    <bank_account account_id="1" account_number="1234567890" balance="100" open_timestamp = "100"/>
 </dataset>

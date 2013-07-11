@@ -21,6 +21,7 @@ public class BankAccountDAOImpl implements BankAccountDAO {
     EntityManager entityManager;
     @Override
     public void save(BankAccountDTO bankAccountDTO) {
+        validateBankAccount(bankAccountDTO);
         entityManager.persist(bankAccountDTO);
 
     }
@@ -40,6 +41,16 @@ public class BankAccountDAOImpl implements BankAccountDAO {
         return (BankAccountDTO)query.getResultList().get(0);
     }
 
+    public void validateBankAccount(BankAccountDTO bankAccountDTO){
+        if (bankAccountDTO == null)
+            throw new RuntimeException("bank account empty");
+        if (!isValidateName(bankAccountDTO.getAccountNumber()))
+            throw new RuntimeException("illegal format account number");
+        if (bankAccountDTO.getBalance() < 0 )
+            throw new RuntimeException("not allowed negative balance");
+        if (bankAccountDTO.getOpenTimeStamp() < 0)
+            throw new RuntimeException("not allowed negative OpenTime");
+    }
     public boolean isValidateName(String accountNumber){
         if (accountNumber.length() != 10)
             return false;
@@ -48,8 +59,6 @@ public class BankAccountDAOImpl implements BankAccountDAO {
                 return true;
         }
         return false;
-
-
 
     }
 }
