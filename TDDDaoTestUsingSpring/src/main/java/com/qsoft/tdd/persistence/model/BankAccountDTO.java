@@ -8,6 +8,11 @@ import javax.persistence.*;
  * Time: 1:42 PM
  */
 @Entity
+@NamedQueries(
+    @NamedQuery(
+            name = "bank_account.findByName", query = "select b FROM BankAccountDTO b where b.accountNumber =:accountNumber"
+    )
+)
 @Table(name = "bank_account")
 @SequenceGenerator(name = "account_id_seq", sequenceName = "account_id_seq")
 public class BankAccountDTO {
@@ -21,6 +26,17 @@ public class BankAccountDTO {
     private long balance = 0;
     @Column(name = "open_timestamp")
     private long openTimeStamp;
+    public BankAccountDTO(){
+
+    }
+    public BankAccountDTO(String accountNumber){
+        this.accountNumber = accountNumber;
+        balance = 0;
+    }
+    public BankAccountDTO(String accountNumber, long balance){
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+    }
 
     public long getBankAccountId() {
         return bankAccountId;

@@ -7,6 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 /**
  * User: BinkaA
@@ -20,11 +21,35 @@ public class BankAccountDAOImpl implements BankAccountDAO {
     EntityManager entityManager;
     @Override
     public void save(BankAccountDTO bankAccountDTO) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        entityManager.persist(bankAccountDTO);
+
     }
 
     @Override
     public BankAccountDTO get(String accountNumber) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        //
+        if (!isValidateName(accountNumber)){
+            System.out.println("illegal account number format");
+            return null;
+        }
+        //
+        Query query = entityManager.createNamedQuery("bank_account.findByName");
+        query.setParameter("accountNumber",accountNumber);
+        if (query.getResultList().isEmpty())
+            return null;
+        return (BankAccountDTO)query.getResultList().get(0);
+    }
+
+    public boolean isValidateName(String accountNumber){
+        if (accountNumber.length() != 10)
+            return false;
+        for (int i = 0; i < 10; i++){
+            if (accountNumber.charAt(i) >= '0' && accountNumber.charAt(i) <= '9')
+                return true;
+        }
+        return false;
+
+
+
     }
 }
