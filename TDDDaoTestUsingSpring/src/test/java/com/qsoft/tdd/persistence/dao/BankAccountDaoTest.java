@@ -28,6 +28,7 @@ import javax.persistence.PersistenceContext;
 import javax.sql.DataSource;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 /**
  * User: BinkaA
@@ -75,6 +76,14 @@ public class BankAccountDaoTest {
     }
 
     @Test
+    public void testGetBankAccount(){
+        BankAccountDTO bankAccountDTO = bankAccountDAO.get(accountNumber);
+        assertEquals(accountNumber,bankAccountDTO.getAccountNumber());
+        assertEquals(100,bankAccountDTO.getBalance());
+        assertEquals(100,bankAccountDTO.getOpenTimeStamp());
+    }
+
+    @Test
     public void testSaveBankAccount(){
         BankAccountDTO bankAccountDTO = new BankAccountDTO();
         bankAccountDTO.setAccountNumber("1234567890");
@@ -82,12 +91,17 @@ public class BankAccountDaoTest {
         BankAccountDTO savedBankAccount = bankAccountDAO.get("1234567890");
         assertEquals(bankAccountDTO,savedBankAccount);
     }
+
     @Test
-    public void testGetBankAccount(){
-        BankAccountDTO bankAccountDTO = bankAccountDAO.get(accountNumber);
-        assertEquals(accountNumber,bankAccountDTO.getAccountNumber());
-        assertEquals(100,bankAccountDTO.getBalance());
-        assertEquals(100,bankAccountDTO.getOpenTimeStamp());
+    public void testSaveIlegalBankAccountHasNagativeBalance(){
+        try{
+            BankAccountDTO bankAccountDTO = new BankAccountDTO("1234567890",-10);
+            bankAccountDAO.save(bankAccountDTO);
+            fail();
+        }catch (RuntimeException re){
+            assertEquals("not allowed negative balance",re.getMessage());
+        }
+
     }
 
 
