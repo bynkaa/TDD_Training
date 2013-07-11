@@ -1,7 +1,13 @@
 package com.qsoft.tdd.persistence.dao.Impl;
 
+import com.qsoft.tdd.persistence.dao.TransactionDAO;
 import com.qsoft.tdd.persistence.model.TransactionDTO;
+import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import java.util.List;
 
 /**
@@ -11,22 +17,35 @@ import java.util.List;
  * Time: 2:17 PM
  * To change this template use File | Settings | File Templates.
  */
-public class TransactionDAOImpl {
+@Component
+@Transactional
+public class TransactionDAOImpl implements TransactionDAO{
+    @PersistenceContext
+    EntityManager entityManager;
+
     public void save(TransactionDTO transactionDTO) {
-
-
+        entityManager.persist(transactionDTO);
     }
 
     public List<TransactionDTO> get(String accountNumber) {
-        return null;
+        Query query = entityManager.createNamedQuery("transaction.findByName");
+        query.setParameter("accountNumber",accountNumber);
+        return query.getResultList();
 
     }
 
     public List<TransactionDTO> get(String accountNumber, int number) {
-        return null;  //To change body of created methods use File | Settings | File Templates.
+        Query query = entityManager.createNamedQuery("transaction.getNTransaction");
+            query.setParameter("accountNumber",accountNumber);
+        query.setMaxResults(number);
+        return query.getResultList();
     }
 
     public List<TransactionDTO> get(String accountNumber, long startTime, long stopTime) {
-        return null;  //To change body of created methods use File | Settings | File Templates.
+        Query query = entityManager.createNamedQuery("transaction.getInPeriod");
+        query.setParameter("accountNumber",accountNumber);
+        query.setParameter("startTime",startTime);
+        query.setParameter("stopTime",stopTime);
+        return query.getResultList();
     }
 }
