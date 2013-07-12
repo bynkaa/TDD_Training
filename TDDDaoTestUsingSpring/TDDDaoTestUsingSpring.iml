@@ -17,6 +17,7 @@
           <factory-entry name="NewPersistenceUnit" value="d77f0c32-e944-4007-9951-80d718a89858" />
           <factory-entry name="NewPersistenceUnitTest" value="dataSourceTest" />
         </datasource-mapping>
+        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/test/resources/META-INF/persistenceTest.xml" />
       </configuration>
     </facet>
   </component>

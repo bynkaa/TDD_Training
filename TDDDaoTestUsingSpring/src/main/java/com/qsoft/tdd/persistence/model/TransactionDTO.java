@@ -31,16 +31,20 @@ import javax.persistence.*;
 public class TransactionDTO {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "transaction_id_seq")
+    @Column(name = "transaction_id")
     private Long id;
-    @Column(name = "accountNumber")
+    @Column(name = "account_number")
     private String accountNumber;
     @Column(name = "amount")
     private long amount;
-    @Column(name = "timeStamp")
+    @Column(name = "timestamp")
     private long timeStamp;
     @Column(name = "description")
     private String description;
 
+    public TransactionDTO(){
+
+    }
     public TransactionDTO(String accountNumber, long amount, long timeStamp, String description) {
         this.accountNumber = accountNumber;
         this.amount = amount;

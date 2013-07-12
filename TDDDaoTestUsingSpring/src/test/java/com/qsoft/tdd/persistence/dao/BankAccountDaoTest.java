@@ -2,6 +2,7 @@ package com.qsoft.tdd.persistence.dao;
 
 import com.qsoft.tdd.persistence.dao.Impl.BankAccountDAOImpl;
 import com.qsoft.tdd.persistence.model.BankAccountDTO;
+import com.qsoft.tdd.persistence.model.TransactionDTO;
 import org.dbunit.DataSourceDatabaseTester;
 import org.dbunit.IDatabaseTester;
 import org.dbunit.dataset.DataSetException;
@@ -27,6 +28,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.sql.DataSource;
 
+import java.util.List;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
@@ -47,6 +50,8 @@ public class BankAccountDaoTest {
     private IDatabaseTester databaseTester;
     @Autowired
     private BankAccountDAO bankAccountDAO;
+    @Autowired
+    private TransactionDAO transactionDAO;
     private String accountNumber = "1234567890";
     @Before
     public void setup() throws Exception {
@@ -102,6 +107,49 @@ public class BankAccountDaoTest {
             assertEquals("not allowed negative balance",re.getMessage());
         }
 
+    }
+
+    @Test
+    public void testGetAllTransaction(){
+        List<TransactionDTO> transactionList = transactionDAO.get(accountNumber);
+        assertEquals(1,transactionList.size());
+        TransactionDTO actualTransaction = transactionList.get(0);
+        assertEquals(accountNumber,actualTransaction.getAccountNumber());
+        assertEquals(100L,actualTransaction.getAmount());
+        assertEquals(100L,actualTransaction.getTimeStamp());
+        assertEquals("deposit 100K",actualTransaction.getDescription());
+    }
+
+    @Test
+    public void testSaveTransaction(){
+        TransactionDTO transactionDTO = new TransactionDTO(accountNumber,100L,100L,"deposit 100K");
+        transactionDAO.save(transactionDTO);
+        List<TransactionDTO> transactionList = transactionDAO.get(accountNumber);
+        assertEquals(2,transactionList.size());
+        TransactionDTO actualTransaction = transactionList.get(1);
+        assertEquals(accountNumber,actualTransaction.getAccountNumber());
+        assertEquals(100L,actualTransaction.getAmount());
+        assertEquals(100L,actualTransaction.getTimeStamp());
+        assertEquals("deposit 100K",actualTransaction.getDescription());
+    }
+    @Test
+    public void testGetTransactionInAPeriodTime(){
+        TransactionDTO transactionDTO = new TransactionDTO(accountNumber,200L,199L,"deposit 200K");
+        transactionDAO.save(transactionDTO);
+        List<TransactionDTO> transactionDTOList = transactionDAO.get(accountNumber,100L,200L);
+        assertEquals(2,transactionDTOList.size());
+    }
+    @Test
+    public void testGetNTransactions(){
+        TransactionDTO transactionDTO = new TransactionDTO(accountNumber,200L,200L,"deposit 200K");
+        transactionDAO.save(transactionDTO);
+        List<TransactionDTO> transactionDTOList = transactionDAO.get(accountNumber,1);
+        assertEquals(1,transactionDTOList.size());
+        TransactionDTO actualTransaction = transactionDTOList.get(0);
+        assertEquals(accountNumber,actualTransaction.getAccountNumber());
+        assertEquals(200L,actualTransaction.getAmount());
+        assertEquals(200L,actualTransaction.getTimeStamp());
+        assertEquals("deposit 200K",actualTransaction.getDescription());
     }
 
 
