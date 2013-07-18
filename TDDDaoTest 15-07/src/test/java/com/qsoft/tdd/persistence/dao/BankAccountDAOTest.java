@@ -130,6 +130,24 @@ public class BankAccountDAOTest {
         assertEquals(100L,actualTransaction.getTimeStamp());
         assertEquals("deposit 100K",actualTransaction.getDescription());
     }
-
+    @Test
+    public void testGetTransactionInAPeriodTime(){
+        TransactionDTO transactionDTO = new TransactionDTO(accountNumber,200L,199L,"deposit 200K");
+        transactionDAO.save(transactionDTO);
+        List<TransactionDTO> transactionDTOList = transactionDAO.get(accountNumber,100L,200L);
+        assertEquals(2,transactionDTOList.size());
+    }
+    @Test
+    public void testGetNTransactions(){
+        TransactionDTO transactionDTO = new TransactionDTO(accountNumber,200L,200L,"deposit 200K");
+        transactionDAO.save(transactionDTO);
+        List<TransactionDTO> transactionDTOList = transactionDAO.get(accountNumber,1);
+        assertEquals(1,transactionDTOList.size());
+        TransactionDTO actualTransaction = transactionDTOList.get(0);
+        assertEquals(accountNumber,actualTransaction.getAccountNumber());
+        assertEquals(200L,actualTransaction.getAmount());
+        assertEquals(200L,actualTransaction.getTimeStamp());
+        assertEquals("deposit 200K",actualTransaction.getDescription());
+    }
 
 }
