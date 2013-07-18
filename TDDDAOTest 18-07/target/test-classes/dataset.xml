@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+    <bank_account account_id="1" account_number="1234567890" balance="100" open_timestamp = "100"/>
+    <transaction transaction_id="1" account_number="1234567890" amount="100" timestamp="100" description="deposit 100K"/>
+</dataset>
