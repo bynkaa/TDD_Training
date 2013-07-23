@@ -7,36 +7,48 @@ import java.util.ArrayList;
  * Date: 7/22/13
  * Time: 1:39 PM
  */
+class Node{
+    Object data;
+    Node next;
+
+}
 public class SingleLinkedList
 {
-    private ArrayList dataList;
-
+    Node firstNode;
+    Node lastNode;
     public SingleLinkedList(){
-        dataList = new ArrayList();
+        firstNode = new Node();
+        lastNode = new Node();
     }
-    public SingleLinkedList(Object[] arrayObject)
-    {
-        dataList = new ArrayList();
-        for (int i = 0; i < arrayObject.length; i++)
-            dataList.add( arrayObject[i]);
+    public SingleLinkedList(Object[] objects){
+        for (int i = 0; i < objects.length; i++)
+            append(objects[i]);
     }
-    public int find(Object data){
-        for (int i = 0; i < dataList.size(); i ++)
+    public void append(Object data){
+        Node lastNode = new Node();
+        lastNode.data = data;
+        lastNode.next = null;
+    }
+
+    public Node find(Object o){
+        if (firstNode == null)
+            return null;
+        Node node = firstNode;
+        do
         {
-            if (dataList.get(i).equals(data))
-                return i;
-        }
-        return -1;
+            if (node.data == o)
+                return node;
+        }while (node.next != null);
+        return null;
     }
 
-    public void append(Object object)
-    {
-        dataList.add(object);
-    }
+//    public void insertAfter(Node node, Object o){
+//        Node newNode = new Node();
+//        newNode.data = o;
+//        if(node != null){
+//            newNode.next = node.next;
+//            node.next = newNode;
+//        }
+//    }
 
-    public int size()
-    {
-
-        return dataList.size();
-    }
 }
