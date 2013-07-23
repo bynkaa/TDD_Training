@@ -28,4 +28,15 @@ public class SingleLinkedList
         }
         return -1;
     }
+
+    public void append(Object object)
+    {
+        dataList.add(object);
+    }
+
+    public int size()
+    {
+
+        return dataList.size();
+    }
 }

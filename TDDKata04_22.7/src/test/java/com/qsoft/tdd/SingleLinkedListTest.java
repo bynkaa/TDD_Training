@@ -23,5 +23,18 @@ public class SingleLinkedListTest
         SingleLinkedList singleLinkedList = new SingleLinkedList(arrayObject);
         assertEquals(-1,singleLinkedList.find("c"));
     }
+    @Test
+    public void testAppendAnObject(){
+        SingleLinkedList singleLinkedList = new SingleLinkedList();
+        singleLinkedList.append("a");
+        assertEquals(0,singleLinkedList.find("a"));
+    }
+    @Test
+    public void testGetSizeOfLinkedList(){
+        SingleLinkedList singleLinkedList = new SingleLinkedList();
+        singleLinkedList.append("a");
+        singleLinkedList.append("b");
+        assertEquals(2,singleLinkedList.size());
+    }
 
 }
