@@ -10,45 +10,54 @@ import java.util.ArrayList;
 class Node{
     Object data;
     Node next;
+    public Node(Object data){
+        this.data = data;
+        next = null;
+    }
 
 }
 public class SingleLinkedList
 {
-    Node firstNode;
-    Node lastNode;
+    private Node firstNode;
+    private Node lastNode;
     public SingleLinkedList(){
-        firstNode = new Node();
-        lastNode = new Node();
+        firstNode = null;
+        lastNode = null;
+        firstNode = lastNode;
     }
     public SingleLinkedList(Object[] objects){
         for (int i = 0; i < objects.length; i++)
             append(objects[i]);
+
     }
     public void append(Object data){
-        Node lastNode = new Node();
-        lastNode.data = data;
-        lastNode.next = null;
+        Node node = new Node(data);
+        if (lastNode != null){
+            lastNode.next = node;
+            lastNode = node;
+        }
+        else {
+            lastNode = node;
+            firstNode = lastNode;
+        }
+
+    }
+    //------------------------GET AND SET METHODS-------------------------------------------
+
+    public Node getFirstNode()
+    {
+        return firstNode;
     }
 
-    public Node find(Object o){
-        if (firstNode == null)
-            return null;
-        Node node = firstNode;
-        do
-        {
-            if (node.data == o)
-                return node;
-        }while (node.next != null);
-        return null;
+    public Node getLastNode()
+    {
+        return lastNode;
     }
 
-//    public void insertAfter(Node node, Object o){
-//        Node newNode = new Node();
-//        newNode.data = o;
-//        if(node != null){
-//            newNode.next = node.next;
-//            node.next = newNode;
-//        }
+//    public void insertFirst(Object o){
+//        Node node = new Node(o);
+//        node.next = firstNode;
+//        firstNode = node;
 //    }
 
 }
