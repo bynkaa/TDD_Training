@@ -1,7 +1,5 @@
 package com.qsoft.tdd;
 
-import java.util.ArrayList;
-
 /**
  * User: BinkaA
  * Date: 7/22/13
@@ -42,6 +40,73 @@ public class SingleLinkedList
         }
 
     }
+    public void insertFirst(Object o){
+        Node node = new Node(o);
+        if (firstNode == null)
+            firstNode = node;
+        else {
+            node.next = firstNode;
+            firstNode = node;
+        }
+
+    }
+
+    public Node find(Object o){
+        Node node = firstNode;
+        while(node != null)
+        {
+            if (node.data == o)
+                return node;
+            node = node.next;
+        }
+        return null;
+    }
+
+    public void insertAfter(Node n, Object o){
+        Node node = new Node(o);
+        node.next = n.next;
+        n.next = node;
+    }
+
+    public int size(){
+        int size = 0;
+        Node node = firstNode;
+        while (node != null){
+            size ++;
+            node = node.next;
+        }
+        return size;
+    }
+    public void delete(Node node)
+    {
+        // delete at beginning
+        if (firstNode == node){
+            Node obsoleteNode = firstNode;
+            firstNode = firstNode.next;
+            obsoleteNode = null;
+        }
+        else {
+            Node previous = before(node);
+            Node obsoloteNode = node;
+            previous.next = node.next;
+            obsoloteNode = null;
+        }
+    }
+
+    public Node before(Node node){
+        Node previous = null;
+        Node currentNode = null;
+        for (currentNode = firstNode; currentNode != node; previous = currentNode, currentNode = currentNode.next)
+        {
+
+        }
+        return previous;
+    }
+
+    public Node after(Node node){
+        return node.next;
+    }
+
     //------------------------GET AND SET METHODS-------------------------------------------
 
     public Node getFirstNode()
@@ -54,10 +119,6 @@ public class SingleLinkedList
         return lastNode;
     }
 
-//    public void insertFirst(Object o){
-//        Node node = new Node(o);
-//        node.next = firstNode;
-//        firstNode = node;
-//    }
+
 
 }
